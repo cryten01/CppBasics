@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gerhard/CLionProjects/CppBasics/Class.cpp
+Class.h
+/Users/gerhard/CLionProjects/CppBasics/Class.h
+
+/Users/gerhard/CLionProjects/CppBasics/Class.h
+iostream
+-
+string
+-
+cmath
+-
+ctime
+-
+
+/Users/gerhard/CLionProjects/CppBasics/Preprocessor.cpp
+Preprocessor.h
+/Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
+
+/Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
+
+/Users/gerhard/CLionProjects/CppBasics/main.cpp
+iostream
+-
+Class.h
+/Users/gerhard/CLionProjects/CppBasics/Class.h
+Preprocessor.h
+/Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
+
