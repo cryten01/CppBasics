@@ -10,6 +10,7 @@
 #include <string>
 #include <cmath>
 #include <ctime>
+#include <chrono>
 
 // reference to global variable in main.cpp, doesn't work with static variables
 extern int reference;
@@ -18,9 +19,13 @@ class Class {
 
 public:
     // represents a function prototype
-    static void variableTypes(int &param1, int param2);
+    static void variableOperations(int &param1, int param2);
 
     static void stringOperations();
+
+    static void pointerOperations();
+
+    static void memoryOperations();
 };
 
 
