@@ -1,4 +1,6 @@
-// Tutorial last Stand: 50
+// Tutorial last Stand: 66
+
+// Avoid undefined behaviour otherwise different behaviour in debug/release possible
 
 #pragma once // loads header this file only once
 
@@ -6,7 +8,7 @@
 #include "Class.h"
 #include "Preprocessor.h"
 
-// global variable
+// Global variable
 int reference = 1;
 
 // Template: represents a function template where the compiler inserts the data type dependent on input
@@ -21,19 +23,20 @@ void functionTemplates(int attrib) {
     std::cout << "I'm an integer" << std::endl;
 }
 
-
-int main() {
+// argc = how many program arguments
+// argv = array of program arguments
+int main(int argc, char* argv[]) {
 
     // Class::function() represents a namespace
     Preprocessor::demonstration();
-    Class::variableOperations(reference, 2);
+    Class::dataTypeOperations(reference, 2);
     Class::stringOperations();
     Class::memoryOperations();
     Class::pointerOperations();
+    Class::ioOperations();
 
     functionTemplates("Hello");
     functionTemplates(10);
-
 
     // 0 means correct execution here
     return 0;

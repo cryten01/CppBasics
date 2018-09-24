@@ -1,18 +1,14 @@
 #include "Class.h"
 
+
 int *writeIntoHeap() {
     int *ptr = new int;
     return ptr;
 }
 
-void Class::variableOperations(int &param1, int param2 = 1) {
+void Class::dataTypeOperations(int &param1, int param2 = 1) {
 
-    // Short
-    // Int
-    // Long
     // Long Long
-    // Float
-    // Double
     // Long Double
     // Bool (all other types can also be bool 0 = false, 1...n = true)
 
@@ -38,7 +34,7 @@ void Class::variableOperations(int &param1, int param2 = 1) {
     // Casting used in C++
     int cppStyleCasting = static_cast<int>(PI);
 
-    // Static variables exist during entire program lifetime, multiple variableOperations calls -> only 1 variable
+    // Static variables exist during entire program lifetime, multiple dataTypeOperations calls -> only 1 variable
     static int statVar = 10;
 
     // Array, out of bound can cause overrides in RAM
@@ -51,15 +47,31 @@ void Class::variableOperations(int &param1, int param2 = 1) {
     srand(time(0));
 
     // Start time
-    std::chrono::high_resolution_clock::time_point start =  std::chrono::high_resolution_clock::now();
+    // using auto to avoid std::chrono::high_resolution_clock::timepoint
+    // compiler automatically interprets auto, avoid using it when primitives, use only when unique identifiable
+    auto start = std::chrono::high_resolution_clock::now();
+    // End time
+    auto end = std::chrono::high_resolution_clock::now();
+    // Diff
+    auto diff = end - start;
+    // Duration in ms
+    int ms = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();
 
     // Typedef creates a new data type, (+) makes code more readable, (+) shorter names
     // Only advisable with own functions because type can be interpreted as char in this case (e.g. std::cout)
     typedef unsigned char byte;
     byte b = 5;
 
-}
+    // C++: Vector, Java: Arraylist
+    // Attention: object is already created here as new means something different in C++
+    std::vector<int> myVec(10);
+    // Extends vector and inserts 10 behind last index of vector
+    myVec.push_back(10);
 
+    // Enum
+    Color color = RED;
+}
+//
 void Class::stringOperations() {
 
     // C String (Stores ASCII codes in array)
@@ -139,7 +151,7 @@ void Class::pointerOperations() {
     int &myIntRef = myInt;
     void (*myFuncPtr)(int &, int);
     // Points to actual function
-    myFuncPtr = variableOperations;
+    myFuncPtr = dataTypeOperations;
     // Executes function
     myFuncPtr(myIntRef, 10);
 
@@ -177,4 +189,69 @@ void Class::memoryOperations() {
     // Heap segment gets increased/decreased when new/delete, needs manual memory management
 }
 
+void Class::ioOperations() {
+
+    // Creates an output file stream
+    std::ofstream outFile;
+    // Open flags
+    // app appends to last position per call
+    // ate put writing position to end when file gets opened
+    // trunc resets bytesize to zero and starts again
+    // can be combined with "|" = bitwise or
+    outFile.open("/Users/gerhard/CLionProjects/CppBasics/Textfile.txt", std::ios::trunc | std::ios::binary);
+
+    // Checks if file stream is open
+    if (outFile.is_open()) {
+        outFile << "Write operation";
+        outFile.close();
+    } else {
+        std::cerr << "Error during opening of file!";
+    }
+
+
+    // Creates an input file stream
+    std::ifstream inFile;
+    std::string line;
+    inFile.open("/Users/gerhard/CLionProjects/CppBasics/Textfile.txt");
+
+    // Checks if file stream is open
+    if (inFile.is_open()) {
+        // every line should be stored in File
+        while (std::getline(inFile, line)) {
+            std::cout << line << std::endl;
+        }
+        inFile.close();
+    } else {
+        std::cerr << "Error during opening of file!";
+    }
+
+    // Read in binary data
+    char *buffer;
+    // Closed file streams can be reused
+    // ate guarantees that reading position is at end of line
+    inFile.open("/Users/gerhard/CLionProjects/CppBasics/Textfile.zip", std::ios::binary | std::ios::ate);
+
+    if (inFile.is_open()) {
+        // tellg() returns reading position
+        int size = inFile.tellg();
+        // dynamically allocates memory
+        buffer = new char[size];
+        // beg sets reading position to beginning
+        inFile.seekg(0, std::ios::beg);
+        // reads everything in the buffer
+        inFile.read(buffer, size);
+
+        inFile.close();
+        delete[] buffer;
+        buffer = nullptr;
+    } else {
+        std::cerr << "Error during opening of file!";
+    }
+
+    // redirect cerr in log file
+    std::ofstream logFile("/Users/gerhard/CLionProjects/CppBasics/Logfile.txt", std::ios::app);
+    std::cerr.rdbuf(logFile.rdbuf());
+    std::cerr << "Error!" << std::endl;
+    logFile.close();
+};
 

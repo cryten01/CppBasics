@@ -11,21 +11,32 @@
 #include <cmath>
 #include <ctime>
 #include <chrono>
+#include <vector>
+#include <fstream>
 
 // reference to global variable in main.cpp, doesn't work with static variables
 extern int reference;
+
+// variable with limited range of values
+enum Color {
+    RED,
+    GREEN,
+    BLUE
+};
 
 class Class {
 
 public:
     // represents a function prototype
-    static void variableOperations(int &param1, int param2);
+    static void dataTypeOperations(int &param1, int param2);
 
     static void stringOperations();
 
     static void pointerOperations();
 
     static void memoryOperations();
+
+    static void ioOperations();
 };
 
 
