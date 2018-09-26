@@ -26,6 +26,12 @@ vector
 fstream
 -
 
+/Users/gerhard/CLionProjects/CppBasics/DynamicArray.cpp
+DynamicArray.h
+/Users/gerhard/CLionProjects/CppBasics/DynamicArray.h
+
+/Users/gerhard/CLionProjects/CppBasics/DynamicArray.h
+
 /Users/gerhard/CLionProjects/CppBasics/Preprocessor.cpp
 Preprocessor.h
 /Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
@@ -39,4 +45,6 @@ Class.h
 /Users/gerhard/CLionProjects/CppBasics/Class.h
 Preprocessor.h
 /Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
+DynamicArray.h
+/Users/gerhard/CLionProjects/CppBasics/DynamicArray.h
 

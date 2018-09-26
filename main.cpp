@@ -1,4 +1,4 @@
-// Tutorial last Stand: 66
+// Tutorial last Stand: 76 (66-76 skipped)
 
 // Avoid undefined behaviour otherwise different behaviour in debug/release possible
 
@@ -7,6 +7,7 @@
 #include <iostream>
 #include "Class.h"
 #include "Preprocessor.h"
+#include "DynamicArray.h"
 
 // Global variable
 int reference = 1;
@@ -37,6 +38,10 @@ int main(int argc, char* argv[]) {
 
     functionTemplates("Hello");
     functionTemplates(10);
+
+    DynamicArray array(100);
+    array.set(5, 100);
+    std::cout << array.get(5) << std::endl;
 
     // 0 means correct execution here
     return 0;

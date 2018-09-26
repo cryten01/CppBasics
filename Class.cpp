@@ -205,7 +205,7 @@ void Class::ioOperations() {
         outFile << "Write operation";
         outFile.close();
     } else {
-        std::cerr << "Error during opening of file!";
+        std::cerr << "Error during opening of file 1!";
     }
 
 
@@ -222,7 +222,7 @@ void Class::ioOperations() {
         }
         inFile.close();
     } else {
-        std::cerr << "Error during opening of file!";
+        std::cerr << "Error during opening of file 2!";
     }
 
     // Read in binary data
@@ -245,7 +245,7 @@ void Class::ioOperations() {
         delete[] buffer;
         buffer = nullptr;
     } else {
-        std::cerr << "Error during opening of file!";
+        std::cerr << "Error during opening of file 3!";
     }
 
     // redirect cerr in log file
@@ -254,4 +254,5 @@ void Class::ioOperations() {
     std::cerr << "Error!" << std::endl;
     logFile.close();
 };
+
 

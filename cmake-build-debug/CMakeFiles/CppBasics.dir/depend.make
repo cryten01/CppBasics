@@ -4,10 +4,14 @@
 CMakeFiles/CppBasics.dir/Class.cpp.o: ../Class.cpp
 CMakeFiles/CppBasics.dir/Class.cpp.o: ../Class.h
 
+CMakeFiles/CppBasics.dir/DynamicArray.cpp.o: ../DynamicArray.cpp
+CMakeFiles/CppBasics.dir/DynamicArray.cpp.o: ../DynamicArray.h
+
 CMakeFiles/CppBasics.dir/Preprocessor.cpp.o: ../Preprocessor.cpp
 CMakeFiles/CppBasics.dir/Preprocessor.cpp.o: ../Preprocessor.h
 
 CMakeFiles/CppBasics.dir/main.cpp.o: ../Class.h
+CMakeFiles/CppBasics.dir/main.cpp.o: ../DynamicArray.h
 CMakeFiles/CppBasics.dir/main.cpp.o: ../Preprocessor.h
 CMakeFiles/CppBasics.dir/main.cpp.o: ../main.cpp
 

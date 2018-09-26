@@ -150,6 +150,33 @@ Class.cpp.s:
 	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Class.cpp.s
 .PHONY : Class.cpp.s
 
+DynamicArray.o: DynamicArray.cpp.o
+
+.PHONY : DynamicArray.o
+
+# target to build an object file
+DynamicArray.cpp.o:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/DynamicArray.cpp.o
+.PHONY : DynamicArray.cpp.o
+
+DynamicArray.i: DynamicArray.cpp.i
+
+.PHONY : DynamicArray.i
+
+# target to preprocess a source file
+DynamicArray.cpp.i:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/DynamicArray.cpp.i
+.PHONY : DynamicArray.cpp.i
+
+DynamicArray.s: DynamicArray.cpp.s
+
+.PHONY : DynamicArray.s
+
+# target to generate assembly for a file
+DynamicArray.cpp.s:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/DynamicArray.cpp.s
+.PHONY : DynamicArray.cpp.s
+
 Preprocessor.o: Preprocessor.cpp.o
 
 .PHONY : Preprocessor.o
@@ -216,6 +243,9 @@ help:
 	@echo "... Class.o"
 	@echo "... Class.i"
 	@echo "... Class.s"
+	@echo "... DynamicArray.o"
+	@echo "... DynamicArray.i"
+	@echo "... DynamicArray.s"
 	@echo "... Preprocessor.o"
 	@echo "... Preprocessor.i"
 	@echo "... Preprocessor.s"
