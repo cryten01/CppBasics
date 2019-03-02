@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/gerhard/CLionProjects/CppBasics/Class.cpp
-Class.h
-/Users/gerhard/CLionProjects/CppBasics/Class.h
+/Users/gerhard/CLionProjects/CppBasics/Concepts.cpp
+Concepts.h
+/Users/gerhard/CLionProjects/CppBasics/Concepts.h
 
-/Users/gerhard/CLionProjects/CppBasics/Class.h
+/Users/gerhard/CLionProjects/CppBasics/Concepts.h
 iostream
 -
 string
@@ -25,8 +25,14 @@ vector
 -
 fstream
 -
+memory
+-
+SuperclassA.h
+/Users/gerhard/CLionProjects/CppBasics/SuperclassA.h
 
 /Users/gerhard/CLionProjects/CppBasics/DynamicArray.cpp
+iostream
+-
 DynamicArray.h
 /Users/gerhard/CLionProjects/CppBasics/DynamicArray.h
 
@@ -38,13 +44,25 @@ Preprocessor.h
 
 /Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
 
+/Users/gerhard/CLionProjects/CppBasics/SuperclassA.cpp
+iostream
+-
+SuperclassA.h
+/Users/gerhard/CLionProjects/CppBasics/SuperclassA.h
+
+/Users/gerhard/CLionProjects/CppBasics/SuperclassA.h
+
+/Users/gerhard/CLionProjects/CppBasics/Templates.h
+
 /Users/gerhard/CLionProjects/CppBasics/main.cpp
 iostream
 -
-Class.h
-/Users/gerhard/CLionProjects/CppBasics/Class.h
+Concepts.h
+/Users/gerhard/CLionProjects/CppBasics/Concepts.h
 Preprocessor.h
 /Users/gerhard/CLionProjects/CppBasics/Preprocessor.h
 DynamicArray.h
 /Users/gerhard/CLionProjects/CppBasics/DynamicArray.h
+Templates.h
+/Users/gerhard/CLionProjects/CppBasics/Templates.h
 

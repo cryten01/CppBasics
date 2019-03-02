@@ -1,13 +1,21 @@
-// Tutorial last Stand: 76 (66-76 skipped)
+// Tutorial last Stand: 106 (66-76, 101-103 skipped) - 122
 
 // Avoid undefined behaviour otherwise different behaviour in debug/release possible
 
-#pragma once // loads header this file only once
-
 #include <iostream>
-#include "Class.h"
+#include "Concepts.h"
 #include "Preprocessor.h"
 #include "DynamicArray.h"
+#include "Templates.h"
+
+// int and struct share same ram space, means if int changes also struct changes
+union myColor {
+    struct {
+        // reverse because bytes in ram are reversed
+        unsigned char a, b, g, r;
+    };
+    unsigned int rgba;
+};
 
 // Global variable
 int reference = 1;
@@ -26,22 +34,49 @@ void functionTemplates(int attrib) {
 
 // argc = how many program arguments
 // argv = array of program arguments
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
 
-    // Class::function() represents a namespace
-    Preprocessor::demonstration();
-    Class::dataTypeOperations(reference, 2);
-    Class::stringOperations();
-    Class::memoryOperations();
-    Class::pointerOperations();
-    Class::ioOperations();
+    // Concepts::function() represents a namespace
+//    Preprocessor::demonstration();
+//    Concepts::dataTypeOperations(reference, 2);
+//    Concepts::stringOperations();
+//    Concepts::memoryOperations();
+//    Concepts::pointerOperations();
+//    Concepts::ioOperations();
+//    Concepts::dynamicCast();
+    Concepts::smartPointer();
+
+    Templates<int> a1(10);
+    Templates<char *> a2("String");
+
+    std::cout << "** " << a1.getData() << std::endl;
+    std::cout << "** " << a2.getData() << std::endl;
 
     functionTemplates("Hello");
     functionTemplates(10);
 
-    DynamicArray array(100);
-    array.set(5, 100);
-    std::cout << array.get(5) << std::endl;
+    // in C++ method is called based on variable not nearest class
+    SuperclassA *superclassPtr = new Concepts();
+    superclassPtr->baseMethod();
+
+    try {
+        DynamicArray array1(100);
+        array1[5] = 100;
+        DynamicArray array2(120);
+        // Makes use of + operator overloading, (-) slow
+        DynamicArray result = array1 + array2;
+
+        // Use of = operator overloading
+        array1 = array2;
+    } catch (int e) {
+        std::cout << "Int Exception caught!" << std::endl;
+    }
+
+
+    myColor color;
+    color.rgba = 0xFFC080AA;
+    std::cout << +color.r <<  " " << +color.g << " " << +color.b << " " << +color.a << std::endl;
+
 
     // 0 means correct execution here
     return 0;

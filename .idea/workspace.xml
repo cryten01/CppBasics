@@ -12,34 +12,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2083ecfb-16d0-47aa-b42c-07d3033e9e59" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DynamicArray.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DynamicArray.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SuperclassA.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SuperclassA.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Class.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Concepts.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Class.h" beforeDir="false" afterPath="$PROJECT_DIR$/Concepts.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DynamicArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DynamicArray.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DynamicArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/DynamicArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/Class.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/Class.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/Class.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/Preprocessor.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/Preprocessor.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/DynamicArray.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/DynamicArray.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppBasics.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CppBasics" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CppBasics" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CppBasics.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CppBasics.cbp" afterDir="false" />
@@ -57,49 +51,75 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
               <folding>
-                <element signature="e#180#199#0" expanded="true" />
+                <element signature="e#137#156#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Class.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Class.h">
+      <file leaf-file-name="SuperclassA.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SuperclassA.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Class.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="256" selection-start-line="256" selection-end-line="256" />
+            <state relative-caret-position="120">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding>
-                <element signature="e#21#85#0" />
-                <element signature="e#87#2319#0" />
-                <element signature="e#2320#2849#0" />
-                <element signature="e#2851#5089#0" />
-                <element signature="e#5091#6585#0" />
-                <element signature="e#6587#8665#0" />
+                <element signature="e#1#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicArray.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DynamicArray.cpp">
+      <file leaf-file-name="SuperclassA.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SuperclassA.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Preprocessor.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Concepts.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concepts.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+              <folding>
+                <element signature="e#311#330#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Concepts.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concepts.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4560">
+              <caret line="304" lean-forward="true" selection-start-line="304" selection-end-line="304" />
+              <folding>
+                <element signature="e#24#88#0" />
+                <element signature="e#90#2325#0" />
+                <element signature="e#2332#2861#1" />
+                <element signature="e#2861#5102#0" />
+                <element signature="e#5104#6601#0" />
+                <element signature="e#6603#8690#0" />
+                <element signature="e#8693#9312#0" />
+                <element signature="e#9315#9433#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,8 +127,22 @@
       <file leaf-file-name="DynamicArray.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DynamicArray.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Logfile.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Logfile.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicArray.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamicArray.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="84" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -128,10 +162,18 @@
       <list>
         <option value="$PROJECT_DIR$/Preprocessor.h" />
         <option value="$PROJECT_DIR$/Preprocessor.cpp" />
+        <option value="$PROJECT_DIR$/DynamicArray.cpp" />
+        <option value="$PROJECT_DIR$/Superclass.cpp" />
+        <option value="$PROJECT_DIR$/Superclass.h" />
+        <option value="$PROJECT_DIR$/SuperclassA.cpp" />
+        <option value="$PROJECT_DIR$/SuperclassA.h" />
         <option value="$PROJECT_DIR$/Class.h" />
         <option value="$PROJECT_DIR$/Class.cpp" />
         <option value="$PROJECT_DIR$/DynamicArray.h" />
-        <option value="$PROJECT_DIR$/DynamicArray.cpp" />
+        <option value="$PROJECT_DIR$/Templates.cpp" />
+        <option value="$PROJECT_DIR$/Templates.h" />
+        <option value="$PROJECT_DIR$/Concepts.h" />
+        <option value="$PROJECT_DIR$/Concepts.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -145,10 +187,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="814" />
+    <option name="height" value="821" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,7 +217,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -211,11 +253,19 @@
       <workItem from="1537689899970" duration="13033000" />
       <workItem from="1537806855375" duration="1544000" />
       <workItem from="1537814956007" duration="4110000" />
+      <workItem from="1538239129449" duration="5562000" />
+      <workItem from="1538302095211" duration="2173000" />
+      <workItem from="1538399211843" duration="833000" />
+      <workItem from="1539292763522" duration="290000" />
+      <workItem from="1540822571914" duration="597000" />
+      <workItem from="1547391899724" duration="156000" />
+      <workItem from="1551543397489" duration="6828000" />
+      <workItem from="1551551160510" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19542000" />
+    <option name="totallyTimeSpent" value="40095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -227,38 +277,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-241" y="-1057" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="825" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1864139" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.328125" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32916668" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.328125" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32916668" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997195" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32914925" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2085976" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32959327" />
       <window_info anchor="bottom" id="CMake" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32692307" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32959327" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32959327" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997195" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32914925" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32692307" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32692307" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,46 +338,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Class.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" selection-start-line="37" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2880">
-          <caret line="192" selection-start-line="192" selection-end-line="192" />
-          <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
@@ -359,17 +359,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
           </folding>
         </state>
       </provider>
@@ -381,23 +383,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
           </folding>
         </state>
       </provider>
@@ -416,7 +417,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="70" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
@@ -452,30 +453,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="18" selection-start-column="18" selection-end-column="18" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
           </folding>
         </state>
       </provider>
@@ -484,13 +484,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" selection-start-line="37" selection-end-line="38" />
@@ -504,17 +501,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
           <caret line="192" selection-start-line="192" selection-end-line="192" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
           </folding>
         </state>
       </provider>
@@ -523,13 +522,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
@@ -550,17 +546,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
           </folding>
         </state>
       </provider>
@@ -572,23 +570,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
           </folding>
         </state>
       </provider>
@@ -607,7 +604,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="70" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
@@ -629,6 +626,74 @@
     <entry file="file://$PROJECT_DIR$/Textfile.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Templates.cpp" />
+    <entry file="file://$PROJECT_DIR$/Templates.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
+          <folding>
+            <element signature="e#71#83#0" expanded="true" />
+            <element signature="e#280#292#0" expanded="true" />
+            <element signature="e#348#360#0" expanded="true" />
+            <element signature="e#518#530#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concepts.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="304" lean-forward="true" selection-start-line="304" selection-end-line="304" />
+          <folding>
+            <element signature="e#24#88#0" />
+            <element signature="e#90#2325#0" />
+            <element signature="e#2332#2861#1" />
+            <element signature="e#2861#5102#0" />
+            <element signature="e#5104#6601#0" />
+            <element signature="e#6603#8690#0" />
+            <element signature="e#8693#9312#0" />
+            <element signature="e#9315#9433#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concepts.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#311#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamicArray.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="84" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamicArray.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logfile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#137#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Preprocessor.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -636,52 +701,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logfile.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class.h">
+    <entry file="file://$PROJECT_DIR$/SuperclassA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="256" selection-start-line="256" selection-end-line="256" />
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding>
-            <element signature="e#21#85#0" />
-            <element signature="e#87#2319#0" />
-            <element signature="e#2320#2849#0" />
-            <element signature="e#2851#5089#0" />
-            <element signature="e#5091#6585#0" />
-            <element signature="e#6587#8665#0" />
+            <element signature="e#1#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicArray.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicArray.h">
+    <entry file="file://$PROJECT_DIR$/SuperclassA.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding>
-            <element signature="e#180#199#0" expanded="true" />
-          </folding>
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

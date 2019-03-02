@@ -1,5 +1,6 @@
 // .h -> Header file separates the actual implementation from the declaration, (+) easier to read, (+) hide details
 
+#pragma once // loads header this file only once
 #ifndef C_BASICS_VARIABLES_H
 #define C_BASICS_VARIABLES_H
 
@@ -13,6 +14,8 @@
 #include <chrono>
 #include <vector>
 #include <fstream>
+#include <memory>
+#include "SuperclassA.h"
 
 // reference to global variable in main.cpp, doesn't work with static variables
 extern int reference;
@@ -24,7 +27,28 @@ enum Color {
     BLUE
 };
 
-class Class {
+
+// Basic Inheritance
+class A {
+    virtual void doSmth() {};
+public:
+    virtual ~A() {
+        std::cout << "Destructor of Class A called!" << std::endl;
+    }
+};
+
+class B : public A {
+};
+
+class C : public A {
+};
+
+
+// Public inheritance in 99,9%
+// Protected / private inheritance makes all attributes and methods of superclass protected/private
+// Multiple inheritance, no interfaces possible in C++, problematic with variables of same name
+// virtual prevents deadly diamond
+class Concepts : public virtual SuperclassA, public virtual SuperclassB {
 
 public:
     // represents a function prototype
@@ -37,6 +61,15 @@ public:
     static void memoryOperations();
 
     static void ioOperations();
+
+    static void dynamicCast();
+
+    static void reinterpretCast();
+
+    static void smartPointer();
+
+    // represents an override
+    void baseMethod() override;
 };
 
 

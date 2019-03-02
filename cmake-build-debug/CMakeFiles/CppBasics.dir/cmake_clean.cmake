@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CppBasics.dir/main.cpp.o"
-  "CMakeFiles/CppBasics.dir/Class.cpp.o"
+  "CMakeFiles/CppBasics.dir/Concepts.cpp.o"
   "CMakeFiles/CppBasics.dir/Preprocessor.cpp.o"
   "CMakeFiles/CppBasics.dir/DynamicArray.cpp.o"
+  "CMakeFiles/CppBasics.dir/SuperclassA.cpp.o"
   "CppBasics.pdb"
   "CppBasics"
 )

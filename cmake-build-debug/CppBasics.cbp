@@ -78,10 +78,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/Class.cpp">
+		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/Concepts.cpp">
 			<Option target="CppBasics"/>
 		</Unit>
-		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/Class.h">
+		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/Concepts.h">
 			<Option target="CppBasics"/>
 		</Unit>
 		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/DynamicArray.cpp">
@@ -94,6 +94,15 @@
 			<Option target="CppBasics"/>
 		</Unit>
 		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/Preprocessor.h">
+			<Option target="CppBasics"/>
+		</Unit>
+		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/SuperclassA.cpp">
+			<Option target="CppBasics"/>
+		</Unit>
+		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/SuperclassA.h">
+			<Option target="CppBasics"/>
+		</Unit>
+		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/Templates.h">
 			<Option target="CppBasics"/>
 		</Unit>
 		<Unit filename="/Users/gerhard/CLionProjects/CppBasics/main.cpp">

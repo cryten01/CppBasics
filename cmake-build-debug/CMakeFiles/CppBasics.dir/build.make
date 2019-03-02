@@ -81,28 +81,28 @@ CMakeFiles/CppBasics.dir/main.cpp.o.provides: CMakeFiles/CppBasics.dir/main.cpp.
 CMakeFiles/CppBasics.dir/main.cpp.o.provides.build: CMakeFiles/CppBasics.dir/main.cpp.o
 
 
-CMakeFiles/CppBasics.dir/Class.cpp.o: CMakeFiles/CppBasics.dir/flags.make
-CMakeFiles/CppBasics.dir/Class.cpp.o: ../Class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CppBasics.dir/Class.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CppBasics.dir/Class.cpp.o -c /Users/gerhard/CLionProjects/CppBasics/Class.cpp
+CMakeFiles/CppBasics.dir/Concepts.cpp.o: CMakeFiles/CppBasics.dir/flags.make
+CMakeFiles/CppBasics.dir/Concepts.cpp.o: ../Concepts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CppBasics.dir/Concepts.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CppBasics.dir/Concepts.cpp.o -c /Users/gerhard/CLionProjects/CppBasics/Concepts.cpp
 
-CMakeFiles/CppBasics.dir/Class.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppBasics.dir/Class.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gerhard/CLionProjects/CppBasics/Class.cpp > CMakeFiles/CppBasics.dir/Class.cpp.i
+CMakeFiles/CppBasics.dir/Concepts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppBasics.dir/Concepts.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gerhard/CLionProjects/CppBasics/Concepts.cpp > CMakeFiles/CppBasics.dir/Concepts.cpp.i
 
-CMakeFiles/CppBasics.dir/Class.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppBasics.dir/Class.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gerhard/CLionProjects/CppBasics/Class.cpp -o CMakeFiles/CppBasics.dir/Class.cpp.s
+CMakeFiles/CppBasics.dir/Concepts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppBasics.dir/Concepts.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gerhard/CLionProjects/CppBasics/Concepts.cpp -o CMakeFiles/CppBasics.dir/Concepts.cpp.s
 
-CMakeFiles/CppBasics.dir/Class.cpp.o.requires:
+CMakeFiles/CppBasics.dir/Concepts.cpp.o.requires:
 
-.PHONY : CMakeFiles/CppBasics.dir/Class.cpp.o.requires
+.PHONY : CMakeFiles/CppBasics.dir/Concepts.cpp.o.requires
 
-CMakeFiles/CppBasics.dir/Class.cpp.o.provides: CMakeFiles/CppBasics.dir/Class.cpp.o.requires
-	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Class.cpp.o.provides.build
-.PHONY : CMakeFiles/CppBasics.dir/Class.cpp.o.provides
+CMakeFiles/CppBasics.dir/Concepts.cpp.o.provides: CMakeFiles/CppBasics.dir/Concepts.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Concepts.cpp.o.provides.build
+.PHONY : CMakeFiles/CppBasics.dir/Concepts.cpp.o.provides
 
-CMakeFiles/CppBasics.dir/Class.cpp.o.provides.build: CMakeFiles/CppBasics.dir/Class.cpp.o
+CMakeFiles/CppBasics.dir/Concepts.cpp.o.provides.build: CMakeFiles/CppBasics.dir/Concepts.cpp.o
 
 
 CMakeFiles/CppBasics.dir/Preprocessor.cpp.o: CMakeFiles/CppBasics.dir/flags.make
@@ -153,23 +153,49 @@ CMakeFiles/CppBasics.dir/DynamicArray.cpp.o.provides: CMakeFiles/CppBasics.dir/D
 CMakeFiles/CppBasics.dir/DynamicArray.cpp.o.provides.build: CMakeFiles/CppBasics.dir/DynamicArray.cpp.o
 
 
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.o: CMakeFiles/CppBasics.dir/flags.make
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.o: ../SuperclassA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CppBasics.dir/SuperclassA.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CppBasics.dir/SuperclassA.cpp.o -c /Users/gerhard/CLionProjects/CppBasics/SuperclassA.cpp
+
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppBasics.dir/SuperclassA.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gerhard/CLionProjects/CppBasics/SuperclassA.cpp > CMakeFiles/CppBasics.dir/SuperclassA.cpp.i
+
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppBasics.dir/SuperclassA.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gerhard/CLionProjects/CppBasics/SuperclassA.cpp -o CMakeFiles/CppBasics.dir/SuperclassA.cpp.s
+
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.requires:
+
+.PHONY : CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.requires
+
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.provides: CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.provides.build
+.PHONY : CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.provides
+
+CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.provides.build: CMakeFiles/CppBasics.dir/SuperclassA.cpp.o
+
+
 # Object files for target CppBasics
 CppBasics_OBJECTS = \
 "CMakeFiles/CppBasics.dir/main.cpp.o" \
-"CMakeFiles/CppBasics.dir/Class.cpp.o" \
+"CMakeFiles/CppBasics.dir/Concepts.cpp.o" \
 "CMakeFiles/CppBasics.dir/Preprocessor.cpp.o" \
-"CMakeFiles/CppBasics.dir/DynamicArray.cpp.o"
+"CMakeFiles/CppBasics.dir/DynamicArray.cpp.o" \
+"CMakeFiles/CppBasics.dir/SuperclassA.cpp.o"
 
 # External object files for target CppBasics
 CppBasics_EXTERNAL_OBJECTS =
 
 CppBasics: CMakeFiles/CppBasics.dir/main.cpp.o
-CppBasics: CMakeFiles/CppBasics.dir/Class.cpp.o
+CppBasics: CMakeFiles/CppBasics.dir/Concepts.cpp.o
 CppBasics: CMakeFiles/CppBasics.dir/Preprocessor.cpp.o
 CppBasics: CMakeFiles/CppBasics.dir/DynamicArray.cpp.o
+CppBasics: CMakeFiles/CppBasics.dir/SuperclassA.cpp.o
 CppBasics: CMakeFiles/CppBasics.dir/build.make
 CppBasics: CMakeFiles/CppBasics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CppBasics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable CppBasics"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CppBasics.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -178,9 +204,10 @@ CMakeFiles/CppBasics.dir/build: CppBasics
 .PHONY : CMakeFiles/CppBasics.dir/build
 
 CMakeFiles/CppBasics.dir/requires: CMakeFiles/CppBasics.dir/main.cpp.o.requires
-CMakeFiles/CppBasics.dir/requires: CMakeFiles/CppBasics.dir/Class.cpp.o.requires
+CMakeFiles/CppBasics.dir/requires: CMakeFiles/CppBasics.dir/Concepts.cpp.o.requires
 CMakeFiles/CppBasics.dir/requires: CMakeFiles/CppBasics.dir/Preprocessor.cpp.o.requires
 CMakeFiles/CppBasics.dir/requires: CMakeFiles/CppBasics.dir/DynamicArray.cpp.o.requires
+CMakeFiles/CppBasics.dir/requires: CMakeFiles/CppBasics.dir/SuperclassA.cpp.o.requires
 
 .PHONY : CMakeFiles/CppBasics.dir/requires
 

@@ -123,32 +123,32 @@ CppBasics/fast:
 	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/build
 .PHONY : CppBasics/fast
 
-Class.o: Class.cpp.o
+Concepts.o: Concepts.cpp.o
 
-.PHONY : Class.o
+.PHONY : Concepts.o
 
 # target to build an object file
-Class.cpp.o:
-	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Class.cpp.o
-.PHONY : Class.cpp.o
+Concepts.cpp.o:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Concepts.cpp.o
+.PHONY : Concepts.cpp.o
 
-Class.i: Class.cpp.i
+Concepts.i: Concepts.cpp.i
 
-.PHONY : Class.i
+.PHONY : Concepts.i
 
 # target to preprocess a source file
-Class.cpp.i:
-	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Class.cpp.i
-.PHONY : Class.cpp.i
+Concepts.cpp.i:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Concepts.cpp.i
+.PHONY : Concepts.cpp.i
 
-Class.s: Class.cpp.s
+Concepts.s: Concepts.cpp.s
 
-.PHONY : Class.s
+.PHONY : Concepts.s
 
 # target to generate assembly for a file
-Class.cpp.s:
-	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Class.cpp.s
-.PHONY : Class.cpp.s
+Concepts.cpp.s:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Concepts.cpp.s
+.PHONY : Concepts.cpp.s
 
 DynamicArray.o: DynamicArray.cpp.o
 
@@ -204,6 +204,33 @@ Preprocessor.cpp.s:
 	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/Preprocessor.cpp.s
 .PHONY : Preprocessor.cpp.s
 
+SuperclassA.o: SuperclassA.cpp.o
+
+.PHONY : SuperclassA.o
+
+# target to build an object file
+SuperclassA.cpp.o:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/SuperclassA.cpp.o
+.PHONY : SuperclassA.cpp.o
+
+SuperclassA.i: SuperclassA.cpp.i
+
+.PHONY : SuperclassA.i
+
+# target to preprocess a source file
+SuperclassA.cpp.i:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/SuperclassA.cpp.i
+.PHONY : SuperclassA.cpp.i
+
+SuperclassA.s: SuperclassA.cpp.s
+
+.PHONY : SuperclassA.s
+
+# target to generate assembly for a file
+SuperclassA.cpp.s:
+	$(MAKE) -f CMakeFiles/CppBasics.dir/build.make CMakeFiles/CppBasics.dir/SuperclassA.cpp.s
+.PHONY : SuperclassA.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -240,15 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CppBasics"
-	@echo "... Class.o"
-	@echo "... Class.i"
-	@echo "... Class.s"
+	@echo "... Concepts.o"
+	@echo "... Concepts.i"
+	@echo "... Concepts.s"
 	@echo "... DynamicArray.o"
 	@echo "... DynamicArray.i"
 	@echo "... DynamicArray.s"
 	@echo "... Preprocessor.o"
 	@echo "... Preprocessor.i"
 	@echo "... Preprocessor.s"
+	@echo "... SuperclassA.o"
+	@echo "... SuperclassA.i"
+	@echo "... SuperclassA.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

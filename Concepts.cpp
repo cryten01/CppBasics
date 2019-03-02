@@ -1,4 +1,4 @@
-#include "Class.h"
+#include "Concepts.h"
 
 
 int *writeIntoHeap() {
@@ -6,7 +6,7 @@ int *writeIntoHeap() {
     return ptr;
 }
 
-void Class::dataTypeOperations(int &param1, int param2 = 1) {
+void Concepts::dataTypeOperations(int &param1, int param2 = 1) {
 
     // Long Long
     // Long Double
@@ -71,8 +71,9 @@ void Class::dataTypeOperations(int &param1, int param2 = 1) {
     // Enum
     Color color = RED;
 }
+
 //
-void Class::stringOperations() {
+void Concepts::stringOperations() {
 
     // C String (Stores ASCII codes in array)
     char string[] = "Hello";
@@ -90,7 +91,7 @@ void Class::stringOperations() {
     name2.insert(1, name1);
 }
 
-void Class::pointerOperations() {
+void Concepts::pointerOperations() {
 
     float myfloat = 100;
     int myInt = 100;
@@ -158,7 +159,7 @@ void Class::pointerOperations() {
     // Never ever return a pointer to a local/stack variable (= variable with local scope/lifetime)
 }
 
-void Class::memoryOperations() {
+void Concepts::memoryOperations() {
 
     // Pointer that points to dynamic variable (=during runtime and not during compile time as normally)
     // new in C++: dynamic memory gets created, new in Java: Object gets created
@@ -189,7 +190,7 @@ void Class::memoryOperations() {
     // Heap segment gets increased/decreased when new/delete, needs manual memory management
 }
 
-void Class::ioOperations() {
+void Concepts::ioOperations() {
 
     // Creates an output file stream
     std::ofstream outFile;
@@ -255,4 +256,50 @@ void Class::ioOperations() {
     logFile.close();
 };
 
+void Concepts::dynamicCast() {
+
+    // An array with A* Objects
+    A *a[128];
+
+    // Fills every array position randomly with B or C Objects
+    for (int i = 0; i < 128; ++i) {
+
+        if (rand() % 2 == 0) {
+            a[i] = new B();
+        } else {
+            a[i] = new C();
+        }
+    }
+
+    // Not possible because element can be B or C
+//    B* bPtr = static_cast<B*>(a[0]);
+    if (B *bPtr = dynamic_cast<B *>(a[0])) {
+        std::cout << "Dynamically casted to B!" << std::endl;
+
+    } else if (C *bPtr = dynamic_cast<C *>(a[0])) {
+        std::cout << "Dynamically casted to C!" << std::endl;
+    }
+}
+
+void Concepts::reinterpretCast() {
+
+    int *iPtr = new int(128);
+    float *fPtr = reinterpret_cast<float *>(iPtr);
+}
+
+void Concepts::smartPointer() {
+
+    // Shared pointer destroys dynamically allocated object A after no other shared pointer is pointing to (reference counter)
+    std::shared_ptr<A> sPtr(new A());
+
+    // Unique pointer guarantees that only pointer uPtr is pointing to object A
+    std::unique_ptr<A> uPtr(new A());
+
+    // Weak pointer does not increase reference count. Good for ring reference scenarios
+    std::weak_ptr<A> wPtr = sPtr;
+}
+
+void Concepts::baseMethod() {
+    std::cout << "I'm currently in Concepts" << std::endl;
+}
 

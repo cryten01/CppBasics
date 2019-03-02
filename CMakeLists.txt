@@ -3,4 +3,4 @@ project(CppBasics)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(CppBasics main.cpp Class.cpp Class.h Preprocessor.cpp Preprocessor.h DynamicArray.cpp DynamicArray.h)
+add_executable(CppBasics main.cpp Concepts.cpp Concepts.h Preprocessor.cpp Preprocessor.h DynamicArray.cpp DynamicArray.h SuperclassA.cpp SuperclassA.h Templates.h)
