@@ -28,7 +28,6 @@ enum Color {
 };
 
 
-// Basic Inheritance
 class A {
     virtual void doSmth() {};
 public:
@@ -37,6 +36,7 @@ public:
     }
 };
 
+// Basic Inheritance
 class B : public A {
 };
 

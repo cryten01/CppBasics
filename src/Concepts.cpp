@@ -85,7 +85,7 @@ void Concepts::stringOperations() {
 
     // String operations
     int cppLength = name1.length();
-    name1[1] = 'Z';                  // not recommended because of RAM override
+    name1[1] = 'Z';             // not recommended because of RAM override
     name1.at(1) = 'Z';
     name2 = std::to_string(10); // primitives need to be converted to string manually first
     name2.insert(1, name1);

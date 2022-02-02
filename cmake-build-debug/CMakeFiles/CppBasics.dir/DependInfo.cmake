@@ -1,19 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/gerhard/CLionProjects/CppBasics/Concepts.cpp" "/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles/CppBasics.dir/Concepts.cpp.o"
-  "/Users/gerhard/CLionProjects/CppBasics/DynamicArray.cpp" "/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles/CppBasics.dir/DynamicArray.cpp.o"
-  "/Users/gerhard/CLionProjects/CppBasics/Preprocessor.cpp" "/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles/CppBasics.dir/Preprocessor.cpp.o"
-  "/Users/gerhard/CLionProjects/CppBasics/SuperclassA.cpp" "/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles/CppBasics.dir/SuperclassA.cpp.o"
-  "/Users/gerhard/CLionProjects/CppBasics/main.cpp" "/Users/gerhard/CLionProjects/CppBasics/cmake-build-debug/CMakeFiles/CppBasics.dir/main.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/gerhard/CLionProjects/CppBasics/src/Concepts.cpp" "CMakeFiles/CppBasics.dir/src/Concepts.cpp.o" "gcc" "CMakeFiles/CppBasics.dir/src/Concepts.cpp.o.d"
+  "/Users/gerhard/CLionProjects/CppBasics/src/Container.cpp" "CMakeFiles/CppBasics.dir/src/Container.cpp.o" "gcc" "CMakeFiles/CppBasics.dir/src/Container.cpp.o.d"
+  "/Users/gerhard/CLionProjects/CppBasics/src/DynamicArray.cpp" "CMakeFiles/CppBasics.dir/src/DynamicArray.cpp.o" "gcc" "CMakeFiles/CppBasics.dir/src/DynamicArray.cpp.o.d"
+  "/Users/gerhard/CLionProjects/CppBasics/src/Preprocessor.cpp" "CMakeFiles/CppBasics.dir/src/Preprocessor.cpp.o" "gcc" "CMakeFiles/CppBasics.dir/src/Preprocessor.cpp.o.d"
+  "/Users/gerhard/CLionProjects/CppBasics/src/SuperclassA.cpp" "CMakeFiles/CppBasics.dir/src/SuperclassA.cpp.o" "gcc" "CMakeFiles/CppBasics.dir/src/SuperclassA.cpp.o.d"
+  "/Users/gerhard/CLionProjects/CppBasics/src/main.cpp" "CMakeFiles/CppBasics.dir/src/main.cpp.o" "gcc" "CMakeFiles/CppBasics.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

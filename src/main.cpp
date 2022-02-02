@@ -1,4 +1,4 @@
-// Tutorial last Stand: 106 (66-76, 101-103 skipped) - 122
+// Tutorial last Stand: 110 (66-76, 101-103, 107 skipped) - 122
 
 // Avoid undefined behaviour otherwise different behaviour in debug/release possible
 
@@ -7,6 +7,7 @@
 #include "Preprocessor.h"
 #include "DynamicArray.h"
 #include "Templates.h"
+#include "Container.h"
 
 // int and struct share same ram space, means if int changes also struct changes
 union myColor {
@@ -20,17 +21,7 @@ union myColor {
 // Global variable
 int reference = 1;
 
-// Template: represents a function template where the compiler inserts the data type dependent on input
-template<typename T>
-void functionTemplates(T attrib) {
-    std::cout << attrib << std::endl;
-}
 
-// Template specialization: replaces T with int and changes function body
-template<>
-void functionTemplates(int attrib) {
-    std::cout << "I'm an integer" << std::endl;
-}
 
 // argc = how many program arguments
 // argv = array of program arguments
@@ -44,7 +35,12 @@ int main(int argc, char *argv[]) {
 //    Concepts::pointerOperations();
 //    Concepts::ioOperations();
 //    Concepts::dynamicCast();
-    Concepts::smartPointer();
+//    Concepts::smartPointer();
+
+
+    Container container;
+    container.iterator();
+
 
     Templates<int> a1(10);
     Templates<char *> a2("String");
@@ -54,6 +50,7 @@ int main(int argc, char *argv[]) {
 
     functionTemplates("Hello");
     functionTemplates(10);
+
 
     // in C++ method is called based on variable not nearest class
     SuperclassA *superclassPtr = new Concepts();

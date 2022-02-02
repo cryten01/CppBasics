@@ -1,4 +1,4 @@
-// A Preprocessor executes macros during compile time (=code replacement)
+// The preprocessor executes macros during compile time (=code replacement)
 // (+) no performance decrease during runtime
 
 #ifndef C_BASICS_PREPROCESSOR_H  // Include Guard prevents loading this header file (every line of code between ifndef und endif) multiple times
