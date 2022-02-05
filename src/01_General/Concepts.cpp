@@ -96,13 +96,11 @@ void Concepts::pointerOperations() {
     float myfloat = 100;
     int myInt = 100;
 
-    // Pointer (& on left side = reference, & on right side = storage location)
+    // PointerExample (& on left side = reference, & on right side = storage location)
     int *pointer = &myInt;
     // Changes value of myInt to 15.
     // * is always needed to pointed value, otherwise pointer itself gets overwritten!
     *pointer = 15;
-
-
 
     // Represents a pointer to a data block in ram
     int numbers[100];
@@ -114,7 +112,7 @@ void Concepts::pointerOperations() {
         *(beginArray + i) = i;
     }
 
-    // Pointer is now pointing to nothing
+    // PointerExample is now pointing to nothing
     beginArray = nullptr;
 
     // Do not cast a pointer as it changes the memory address and not the pointed value!
@@ -131,7 +129,7 @@ void Concepts::pointerOperations() {
     *floatPointer2 = 10.0;
 
 
-    // Pointer to pointer
+    // PointerExample to pointer
     int a = 10;
     int *aPointer = &a;
     int **pointerToPointer = &aPointer;
@@ -140,9 +138,9 @@ void Concepts::pointerOperations() {
 
     // Read only pointer: Referenced object value cannot be modified but reference itself can be modified.
     const int *myIntPtr1 = &myInt;
-    // Pointer cannot change it's reference but can change its pointed value.
+    // PointerExample cannot change it's reference but can change its pointed value.
     int *const myIntPtr2 = &myInt;
-    // Pointer reference cannot be changed and also pointed value cannot be changed. Not used in practice.
+    // PointerExample reference cannot be changed and also pointed value cannot be changed. Not used in practice.
     const int *const myIntPtr3 = &myInt;
 
 
@@ -161,7 +159,7 @@ void Concepts::pointerOperations() {
 
 void Concepts::memoryOperations() {
 
-    // Pointer that points to dynamic variable (=during runtime and not during compile time as normally)
+    // PointerExample that points to dynamic variable (=during runtime and not during compile time as normally)
     // new in C++: dynamic memory gets created, new in Java: Object gets created
     // When using new also type in delete!
     // Garbage collection can reduce performance significantly
