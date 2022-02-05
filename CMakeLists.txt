@@ -1,6 +1,20 @@
-cmake_minimum_required(VERSION 3.10)
-project(CppBasics)
+# Defines the minimum required cmake version
+cmake_minimum_required(VERSION 3.14)
+# Defines the minimum required C++ version
+set(CMAKE_CXX_STANDARD 17)
+# Sets the name of the project
+project(cppbasics)
 
-set(CMAKE_CXX_STANDARD 11)
+# Defines a path variable
+set(DATASTRUCTURES src/03_DataStructures)
+# Defines a variable for the library name
+set(LIBNAME datastructures)
+# Creates a library with the given source files
+add_library(
+    ${LIBNAME}
+        ${DATASTRUCTURES}/OrderedArray.h
+        ${DATASTRUCTURES}/OrderedArray.cpp
+        ${DATASTRUCTURES}/LinkedList.h
+        ${DATASTRUCTURES}/LinkedList.cpp
+)
 
-add_executable(CppBasics src/main.cpp src/Concepts.cpp src/Concepts.h src/Preprocessor.cpp src/Preprocessor.h src/DynamicArray.cpp src/DynamicArray.h src/SuperclassA.cpp src/SuperclassA.h src/Templates.h src/Container.cpp src/Container.h)
