@@ -18,3 +18,5 @@ add_library(
         ${DATASTRUCTURES}/LinkedList.cpp
 )
 
+# Add content of cmake file from the given subdirectory
+add_subdirectory(testing)
