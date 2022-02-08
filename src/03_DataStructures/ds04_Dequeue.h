@@ -1,30 +1,44 @@
 
-#ifndef CPPBASICS_DS04_QUEUE_H
-#define CPPBASICS_DS04_QUEUE_H
+#ifndef CPPBASICS_DS04_DEQUEUE_H
+#define CPPBASICS_DS04_DEQUEUE_H
 
 #include "ds02_DoubleLinkedList.h"
 
 template<typename T>
-class Queue {
+class Dequeue {
 public:
-    Queue(int size = 10) {
+    Dequeue(int size = 10) {
         assert(size > 0);
         m_size = size;
     }
 
-    virtual ~Queue() {}
+    virtual ~Dequeue() {}
 
-    void Push(T val) {
+    void PushBack(T val) {
         if (m_container.GetSize() >= m_size) return;
-
         m_container.Push(val);
     }
 
-    void Pop() {
+    void PushFront(T val) {
+        if (m_container.GetSize() >= m_size) return;
+        m_container.PushFront(val);
+    }
+
+    void PopBack() {
+        m_container.PopFront();
+    }
+
+    void PopFront() {
         m_container.Pop();
     }
 
     const T &Front() {
+        LinkIterator<T> it;
+        it = m_container.End();
+        return *it;
+    }
+
+    const T &Back() {
         LinkIterator<T> it;
         it = m_container.Begin();
         return *it;
@@ -52,4 +66,4 @@ private:
     int m_size;
 };
 
-#endif //CPPBASICS_DS04_QUEUE_H
+#endif //CPPBASICS_DS04_DEQUEUE_H
