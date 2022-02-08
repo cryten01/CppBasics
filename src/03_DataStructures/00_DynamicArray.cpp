@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "DynamicArray.h"
+#include "00_DynamicArray.h"
 
 DynamicArray::DynamicArray(int size) : size(size) {
 //    (*this).size = size // this in C++ is a pointer to own object. Dereferencing in order to access value

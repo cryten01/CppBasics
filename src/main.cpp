@@ -1,4 +1,6 @@
 #include <iostream>
+#include "01_General/GeneralConcepts.h"
+#include "02_Specific/SpecificConcepts.h"
 
 // Tutorial last Stand: 110 (66-76, 101-103, 107 skipped) - 122
 // Avoid undefined behaviour otherwise different behaviour in debug/release possible
@@ -15,8 +17,6 @@ union myColor {
 // Global variable
 int reference = 1;
 
-
-
 // argc = how many program arguments
 // argv = array of program arguments
 int main(int argc, char *argv[]) {
@@ -31,20 +31,8 @@ int main(int argc, char *argv[]) {
 //    Concepts::dynamicCast();
 //    Concepts::smartPointer();
 
-
     // Container container;
     // container.iterator();
-
-
-    // Templates<int> a1(10);
-    // Templates<char *> a2("String");
-
-    // std::cout << "** " << a1.getData() << std::endl;
-    // std::cout << "** " << a2.getData() << std::endl;
-
-    // functionTemplates("Hello");
-    // functionTemplates(10);
-
 
     // // in C++ method is called based on variable not nearest class
     // SuperclassA *superclassPtr = new Concepts();
@@ -68,6 +56,10 @@ int main(int argc, char *argv[]) {
     color.rgba = 0xFFC080AA;
     std::cout << +color.r <<  " " << +color.g << " " << +color.b << " " << +color.a << std::endl;
 
+    ShowConstExamples();
+    ShowVirtualFunctionsExample();
+    ShowPrintable();
+    TestTemplates();
 
     // 0 means correct execution here
     return 0;

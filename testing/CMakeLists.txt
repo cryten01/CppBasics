@@ -1,7 +1,7 @@
 include(FetchContent)
 FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+        googletest
+        URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
@@ -13,15 +13,16 @@ enable_testing()
 
 # Adds an executable target called <name> to be built from the source files listed
 add_executable(
-  testingExec
-        LinkedListTests.cpp
-        OrderedArrayTests.cpp
+        ${TESTING}
+        t01_UnorderedArrayTests.cpp
+        t02_LinkedListTests.cpp
+        t03_StackTests.cpp
 )
 
 # Linking testingExec with gtest_main and src library
-target_link_libraries(testingExec gtest_main)
-target_link_libraries(testingExec ${LIBNAME})
+target_link_libraries(${TESTING} gtest_main)
+target_link_libraries(${TESTING} ${ALGODAT})
 
 # Loads and runs CMake code from the file given
 include(GoogleTest)
-gtest_discover_tests(testingExec)
+gtest_discover_tests(${TESTING})

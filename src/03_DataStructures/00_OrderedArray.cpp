@@ -1,5 +1,5 @@
 
-#include "OrderedArray.h"
+#include "00_OrderedArray.h"
 
 OrderedArray::OrderedArray(int size, int growBy) : m_array(NULL), m_maxSize(0), m_growSize(0), m_numElements(0) {
     if (size) {

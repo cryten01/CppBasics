@@ -1,6 +1,6 @@
 
-#ifndef CPPBASICS_DS01_LINKEDLIST_H
-#define CPPBASICS_DS01_LINKEDLIST_H
+#ifndef CPPBASICS_DS00_LINKEDLIST_H
+#define CPPBASICS_DS00_LINKEDLIST_H
 
 // Required concepts: Classes, Pointers, Stack vs Heap
 
@@ -32,4 +32,4 @@ public:
     void PrintNode(Node* node);
 };
 
-#endif //CPPBASICS_DS01_LINKEDLIST_H
+#endif //CPPBASICS_DS00_LINKEDLIST_H

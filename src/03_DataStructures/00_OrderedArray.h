@@ -4,7 +4,8 @@
 
 #include <iostream>
 
-// Required concepts: Classes, Pointers, Stack vs Heap, Templates, Operator overloads, virtual
+// Required concepts: Classes, Pointers, Stack vs Heap, TemplateClass,
+// Operator overloads, virtual, const
 
 class OrderedArray {
 public:

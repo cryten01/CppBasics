@@ -4,10 +4,13 @@
 
 ### Structure overview
 
-- `src/01_General` contains basic concepts similar to C#
-- `src/02_CppSpecfic` contains features that are specific to C++
-- `src/03_DataStructures` contains important data structures
+- `src/01_General` contains concepts that are similar to C#
+- `src/02_Specfic` contains concepts that are specific to C++
+- `src/03_DataStructures` contains popular data structures
 - `src/04_Algorithms` contains popular algorithms that use those data structures
+
+
+- `testing` contains unit tests for different algorithms and datastructures in order to ensure validity
 
 ### How to use
 
