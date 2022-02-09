@@ -7,5 +7,6 @@
 #include "ds03_UAStack.h"
 #include "ds03_LLStack.h"
 #include "ds04_Dequeue.h"
+#include "ds05_HashTable.h"
 
 #endif //CPPBASICS_DATASTRUCTURES_H
