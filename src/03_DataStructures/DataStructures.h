@@ -8,5 +8,6 @@
 #include "ds03_LLStack.h"
 #include "ds04_Dequeue.h"
 #include "ds05_HashTable.h"
+#include "ds05_LLHashTable.h"
 
 #endif //CPPBASICS_DATASTRUCTURES_H
