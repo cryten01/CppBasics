@@ -17,7 +17,9 @@ add_executable(
         t01_UnorderedArrayTests.cpp
         t02_LinkedListTests.cpp
         t03_StackTests.cpp
-        t04_DequeueTests.cpp)
+        t04_DequeueTests.cpp
+        t05_HashTableTests.cpp
+)
 
 # Linking testingExec with gtest_main and src library
 target_link_libraries(${TESTING} gtest_main)

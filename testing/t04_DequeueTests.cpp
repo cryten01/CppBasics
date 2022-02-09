@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/03_DataStructures/ds04_Dequeue.h"
+#include "../src/03_DataStructures/DataStructures.h"
 
 class DequeueTest : public ::testing::Test {
 protected:
@@ -48,7 +48,6 @@ TEST_F(DequeueTest, Back) {
     emptyDequeue.PushBack(34);
     emptyDequeue.PushBack(40);
     emptyDequeue.PushBack(21);
-
     EXPECT_EQ(emptyDequeue.Back(), 34);
 }
 
