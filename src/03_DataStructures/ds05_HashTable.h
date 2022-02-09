@@ -79,13 +79,19 @@ public:
         if (m_totalItems == m_size)
             return false;
 
-        // Generate hash
+        // Generate hash for array position
         int hash = HashFunction(key);
+
+        // Generate hash for step
+        int step = HashFunction2(key);
 
         // Check for empty spot
         while (m_table[hash].GetKey() != -1) {
-            // Otherwise, step linearly
-            hash++;
+
+            // Step by generated hash value
+            hash += step;
+
+            // Adjust hash value
             hash %= m_size;
         }
 
@@ -101,13 +107,14 @@ public:
     }
 
     void Delete(int key) {
-        // Generate hash
+        // Generate hashes
         int hash = HashFunction(key);
+        int step = HashFunction2(key);
 
         // Store original hash for later references
         int originalHash = hash;
 
-        // Check for entry on position: hash
+        // Loop until we found a non-empty array position
         while (m_table[hash].GetKey() != -1) {
 
             // If key exists at this position
@@ -121,8 +128,9 @@ public:
                 return;
             }
 
-            // Otherwise, step linearly
-            hash++;
+            // Step by generated hash value
+            hash += step;
+            // Adjust hash value
             hash %= m_size;
 
             // Compare hashes (avoids infinite loops?)
@@ -134,6 +142,7 @@ public:
 
     bool Find(int key, T *obj) {
         int hash = HashFunction(key);
+        int step = HashFunction2(key);
         int originalHash = hash;
 
         while (m_table[hash].GetKey() != -1) {
@@ -149,8 +158,8 @@ public:
                 return true;
             }
 
-            // Otherwise, step linearly
-            hash++;
+            // Step by generated hash value and adjust hash
+            hash += step;
             hash %= m_size;
 
             // Compare hashes (avoids infinite loops?)
@@ -174,6 +183,10 @@ public:
             hash = (hash * 256 + val) % m_size;
         }
         return hash;
+    }
+
+    int HashFunction2(int key) {
+        return 3 - key % 3;
     }
 
     int GetSize() {
