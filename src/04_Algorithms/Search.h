@@ -2,11 +2,12 @@
 #ifndef CPPBASICS_SEARCH_H
 #define CPPBASICS_SEARCH_H
 
-#include "../03_DataStructures/00_OrderedArray.h"
+#include "../03_DataStructures/ds01_OrderedArray.h"
 
 class Search {
-    int LinearSearch(int val);
-    int BinarySearch(OrderedArray* arrayPtr, int value);
+public:
+    static int LinearSearch(int val);
+    static int BinarySearch(OrderedArray<int>& array, int value);
 };
 
 

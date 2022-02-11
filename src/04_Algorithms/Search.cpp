@@ -14,18 +14,18 @@ int Search::LinearSearch(int val) {
     return -1;
 }
 
-int Search::BinarySearch(OrderedArray *arrayPtr, int value) {
+int Search::BinarySearch(OrderedArray<int>& array, int value) {
     int low = 0;
-    int high = arrayPtr->getMNumElements() - 1;
-    int current = 0;
+    int high = array.GetSize() - 1;
 
     while (low <= high) {
         int mid = low + (high - low) / 2;
 
-        if (arrayPtr->operator[](mid) == value) {
+        if (array[mid] == value) {
             return mid;
         }
-        if (arrayPtr->operator[](mid) < value) {
+
+        if (array[mid] < value) {
             low = mid + 1;
         } else {
             high = mid + 1;
