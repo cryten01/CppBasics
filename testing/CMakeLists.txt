@@ -14,6 +14,7 @@ enable_testing()
 # Adds an executable target called <name> to be built from the source files listed
 add_executable(
         ${TESTING}
+        t01_OrderedArrayTests.cpp
         t01_UnorderedArrayTests.cpp
         t02_LinkedListTests.cpp
         t03_StackTests.cpp
