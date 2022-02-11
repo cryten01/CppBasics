@@ -20,6 +20,7 @@ add_executable(
         t04_DequeueTests.cpp
         t05_HashTableTests.cpp
         t06_TreeTests.cpp
+        ta01_SearchTests.cpp
         ta02_SortTests.cpp
 )
 
