@@ -25,6 +25,11 @@ TEST_F(SortTests, InsertionSort) {
     EXPECT_EQ(vec, toCompare);
 }
 
+TEST_F(SortTests, MergeSort) {
+    MergeSort(vec, 0, vec.size()-1);
+    EXPECT_EQ(vec, toCompare);
+}
+
 TEST(SortTests, CountingSort) {
     std::vector<int> vec{1, 1, 0, 2};
     std::vector<int> freq = CountingSort(vec, 3);
@@ -32,3 +37,5 @@ TEST(SortTests, CountingSort) {
 
     EXPECT_EQ(freq, freqRes);
 }
+
+
