@@ -10,3 +10,8 @@ TEST(SearchTests, BinarySearch) {
     EXPECT_EQ(result, 2);
 }
 
+TEST(SearchTests, TwoPointerSearch) {
+    std::vector<int> array = {2,3,5,8,9,10,11};
+    EXPECT_TRUE(Search::TwoPointerSearch(array, 17));
+}
+
