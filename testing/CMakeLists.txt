@@ -23,7 +23,9 @@ add_executable(
         t06_TreeTests.cpp
         ta01_SearchTests.cpp
         ta02_SortTests.cpp
-)
+        b01_TwoPointerTests.cpp
+        b02_StringTests.cpp
+        b03_LArrayTests.cpp b04_DynamicProgramming.cpp)
 
 # Linking testingExec with gtest_main and src library
 target_link_libraries(${TESTING} gtest_main)
