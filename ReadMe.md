@@ -7,8 +7,8 @@
 - `src/01_General` contains concepts that are similar to C#
 - `src/02_Specfic` contains concepts that are specific to C++
 - `src/03_DataStructures` contains popular data structures
-- `src/04_Algorithms` contains popular algorithms that use those data structures
-
+- `src/04_Algorithms` contains popular algorithms that use those data structures 
+- `src/05_Bonus` contains solved problems from leetcode.com.
 
 - `testing` contains unit tests for different algorithms and datastructures in order to ensure validity
 
@@ -20,7 +20,7 @@
 
 ### Useful links and materials:
 
-- C++ documentation: https://en.cppreference.com/w/
+- C++ documentation: https://www.cplusplus.com/reference/
 - GoogleTest documentation: https://google.github.io/googletest/
 - BigO cheatsheet: https://www.bigocheatsheet.com/
 - Further reading: https://www.geeksforgeeks.org/

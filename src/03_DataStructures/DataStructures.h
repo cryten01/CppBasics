@@ -9,5 +9,7 @@
 #include "ds04_Dequeue.h"
 #include "ds05_HashTable.h"
 #include "ds05_LLHashTable.h"
+#include "ds06_Tree.h"
+#include "ds06_BST.h"
 
 #endif //CPPBASICS_DATASTRUCTURES_H

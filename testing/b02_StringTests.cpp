@@ -8,8 +8,14 @@ TEST(StringTests, ReverseString) {
 }
 
 TEST(StringTests, FindUniqueChar) {
-    std::string word = "Loveleetcode";
-    EXPECT_EQ(firstUniqChar(word), 2);
+    // Default
+    EXPECT_EQ(firstUniqChar("Loveleetcode"), 2);
+    // No unique
+    EXPECT_EQ(firstUniqChar("aabb"), -1);
+    // Single char
+    EXPECT_EQ(firstUniqChar("a"), 0);
+    // Last char
+    EXPECT_EQ(firstUniqChar("aabbv"),4);
 }
 
 TEST(StringTests, MyAtoi) {
@@ -47,4 +53,10 @@ TEST(StringTests, ReverseWords) {
     std::string words = "God Ding";
     words = reverseWords(words);
     EXPECT_EQ(words, "doG gniD");
+}
+
+TEST(StringTests, RansomNote) {
+    EXPECT_FALSE(canConstruct("a", "b"));
+    EXPECT_FALSE(canConstruct("aa", "ab"));
+    EXPECT_TRUE(canConstruct("aa", "aab"));
 }

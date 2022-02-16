@@ -5,7 +5,7 @@ add_library(
         03_DataStructures/Datastructures.h
         04_Algorithms/Algorithms.h
         04_Algorithms/Search.cpp
-)
+        05_Bonus/Bonus.h)
 
 # Add files here that do not need google test to run
 add_executable(
@@ -13,4 +13,5 @@ add_executable(
         main.cpp
         01_General/GeneralConcepts.h
         02_Specific/SpecificConcepts.h
+        03_DataStructures/STLContainers.h
 )

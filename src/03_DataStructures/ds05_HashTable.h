@@ -53,7 +53,6 @@ public:
         }
     }
 
-private:
     bool isNumPrime(int val) {
         for (int i = 2; (i * i) <= val; i++) {
             if ((val % i) == 0)
@@ -73,7 +72,6 @@ private:
         return prime;
     }
 
-public:
     bool Insert(int key, T &obj) {
         // Check if table is already full
         if (m_totalItems == m_size)

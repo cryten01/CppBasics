@@ -49,7 +49,7 @@ void InsertionSort(std::vector<int> &array) {
     int temp;
     int i = 0;
 
-    // Loop through all items except first
+    // Loop through all items except list
     for (int k = 1; k < array.size(); k++) {
         temp = array[k];
         i = k;
@@ -85,7 +85,7 @@ void Merge(std::vector<int> &array, int left, int mid, int right) {
     for (auto j = 0; j < subArrayTwo; j++)
         rightArray[j] = array[mid + 1 + j];
 
-    auto subOne = 0;    // Initial index of first sub-array
+    auto subOne = 0;    // Initial index of list sub-array
     auto subTwo = 0;    // Initial index of second sub-array
     int merged = left;  // Initial index of merged array
 

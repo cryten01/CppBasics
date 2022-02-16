@@ -45,7 +45,7 @@ int Search::BinarySearch(OrderedArray<int> &array, int value) {
 int Search::TwoPointerSearch(std::vector<int> &array, int target) {
     int size = array.size();
 
-    // Represents first pointer
+    // Represents list pointer
     int i = 0;
 
     // Represents second pointer

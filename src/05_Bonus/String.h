@@ -18,17 +18,25 @@ void reverseString(std::vector<char> &s) {
     }
 }
 
+/**
+ * 387. First Unique Character in a String
+ * Hash Table, String, Queue
+ * @param s the string to test.
+ * @return the index of the non repeating char or otherwise -1.
+ */
 int firstUniqChar(std::string s) {
-    std::unordered_map<char, int> letterCountMap;
+    std::unordered_map<char, int> frequencyMap;
+
     // Store character occurrence
     for (char &c: s) {
-        letterCountMap[std::tolower(c)] += 1;
+        frequencyMap[std::tolower(c)] += 1;
     }
 
     // Find the correct index
     for (int i = 0; i < s.size(); i++) {
         char c = s[i];
-        if (letterCountMap[c] == 1) {
+
+        if (frequencyMap[c] == 1) {
             return i;
         }
     }
@@ -41,7 +49,7 @@ int myAtoi(std::string s) {
     bool isNegative = false;
     int i = 0;
 
-    // Skip first white spaces
+    // Skip list white spaces
     while (s[i] == ' ') {
         i++;
     }
@@ -129,6 +137,34 @@ std::string reverseWords(std::string s) {
     }
 
     return s;
+}
+
+/**
+ * 383. Ransom Note
+ * Hash Table, String, Counting
+ * @param ransomNote the note thats inside magazine in lower case letters.
+ * @param magazine the string containing ransomnote in lower case letters.
+ * @return true if ransomnote can be constructed otherwise false
+ */
+bool canConstruct(std::string ransomNote, std::string magazine) {
+    std::unordered_map<char, int> frequencyMap;
+
+    // Store all available letters in a frequency map first
+    for (char &c: magazine) {
+        frequencyMap[c]++;
+    }
+
+    // Remove entries and check size
+    for (char &c: ransomNote) {
+        // Check if characters are left or entry even exists
+        if (frequencyMap[c] <= 0 || frequencyMap.find(c) == frequencyMap.end()) {
+            return false;
+        }
+
+        frequencyMap[c]--;
+    }
+
+    return true;
 }
 
 #endif //CPPBASICS_STRING_H

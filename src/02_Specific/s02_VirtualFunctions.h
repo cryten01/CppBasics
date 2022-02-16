@@ -27,7 +27,6 @@ public:
 };
 
 
-
 void ShowVirtualFunctionsExample() {
     Entt* e = new Bird("Entity");
     std::cout << e->GetName() << std::endl;

@@ -109,10 +109,10 @@ void moveZeroes(std::vector<int> &nums) {
 
 /**
  * Merges two arrays into nums1 in ascending order.
- * Sorts first partition with swapped elements so that the biggest 3 are in nums2
+ * Sorts list partition with swapped elements so that the biggest 3 are in nums2
  * Inserts last elements from nums 2 into nums 1.
- * @param nums1 the first integer array sorted in ascending order.
- * @param m the number of elements in the first integer array.
+ * @param nums1 the list integer array sorted in ascending order.
+ * @param m the number of elements in the list integer array.
  * @param nums2  the second integer array sorted in ascending order.
  * @param n the number of elements in the second integer array.
  */

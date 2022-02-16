@@ -29,9 +29,11 @@ public:
 
     virtual void Push(T val) {
         assert(m_array != NULL);
+
         if (m_numElements >= m_maxSize) {
             Expand();
         }
+
         m_array[m_numElements] = val;
         m_numElements++;
     }
@@ -67,10 +69,12 @@ public:
 
     virtual int Search(T val) {
         assert(m_array != NULL);
+
         for (int i = 0; i < m_numElements; i++) {
             if (m_array[i] == val)
                 return i;
         }
+
         return -1;
     }
 

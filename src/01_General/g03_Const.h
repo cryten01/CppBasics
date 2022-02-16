@@ -38,7 +38,7 @@ void ShowConstExamples() {
     // this is not possible because
 //    *number = 10;
 
-    // identical to first case
+    // identical to list case
     int const *number2 = new int;
 
     // Pointer immutability
