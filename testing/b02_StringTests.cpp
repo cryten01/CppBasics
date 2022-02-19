@@ -15,7 +15,7 @@ TEST(StringTests, FindUniqueChar) {
     // Single char
     EXPECT_EQ(firstUniqChar("a"), 0);
     // Last char
-    EXPECT_EQ(firstUniqChar("aabbv"),4);
+    EXPECT_EQ(firstUniqChar("aabbv"), 4);
 }
 
 TEST(StringTests, MyAtoi) {
@@ -59,4 +59,10 @@ TEST(StringTests, RansomNote) {
     EXPECT_FALSE(canConstruct("a", "b"));
     EXPECT_FALSE(canConstruct("aa", "ab"));
     EXPECT_TRUE(canConstruct("aa", "aab"));
+}
+
+TEST(StringTests, ValidParenthesis) {
+    EXPECT_TRUE(isValid(""));
+    EXPECT_TRUE(isValid("(){}[]"));
+    EXPECT_FALSE(isValid("(]"));
 }

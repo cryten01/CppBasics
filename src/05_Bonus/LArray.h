@@ -106,7 +106,12 @@ int singleNumber(std::vector<int> &nums) {
     return result;
 }
 
-
+/**
+ *
+ * @param nums
+ * @param target
+ * @return
+ */
 int search(std::vector<int> &nums, int target) {
     int low = 0;
     int high = nums.size() - 1;

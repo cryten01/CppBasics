@@ -7,5 +7,6 @@
 #include "TwoPointers.h"
 #include "DynamicProgramming.h"
 #include "LinkedList.h"
+#include "Queue.h"
 
 #endif //CPPBASICS_BONUS_

@@ -14,13 +14,13 @@ struct ListNode {
 };
 
 /**
- * Reverses the LinkedList
+ * 206. Reverse Linked List
  * @param head the starting node.
  * @return the new head of the linked list.
  */
 ListNode *reverseList(ListNode *head) {
     // Case: 0, 1
-    if (head == nullptr || head->next == nullptr) return head;
+    if (head == nullptr) return head;
 
     // Case: 2-n
     ListNode *previous = nullptr;
@@ -28,10 +28,8 @@ ListNode *reverseList(ListNode *head) {
     ListNode *next = nullptr;
 
     while (current != nullptr) {
-        // Set next list before relinking
-        next = current->next;
-        // Relinking
-        current->next = previous;
+        next = current->next;      // Set next list before relinking
+        current->next = previous;  // Relinking
 
         // Prepare for next iteration step
         previous = current;
@@ -48,20 +46,26 @@ ListNode *reverseList(ListNode *head) {
  * @return list1 now containing all elements of both lists in a sorted manner.
  */
 ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
-    // Use dummy node to avoid edge cases (0,1)
+    // Use dummy node to avoid edge cases (0,1) because head can change
     ListNode dummy(INT_MIN);
     ListNode *tail = &dummy;
 
     // Traverse both lists at the same time
     while (list1 != nullptr && list2 != nullptr) {
+        // Smaller or bigger/equal
         if (list1->val < list2->val) {
+            // Insert
             tail->next = list1;
+            // Move list1 pointer
             list1 = list1->next;
         } else {
+            // Insert
             tail->next = list2;
+            // Move list2 pointer
             list2 = list2->next;
         }
 
+        // Iteration step
         tail = tail->next;
     }
 
@@ -73,7 +77,7 @@ ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
     }
 
     // Returns dummy.next which is actual starting value
-    // Dummy gets deleted then because allocated on stack
+    // Dummy gets deleted when out of scope because allocated on stack
     return dummy.next;
 }
 
@@ -149,6 +153,62 @@ ListNode *removeNthFromEnd(ListNode *head, int n) {
     slow->next = slow->next->next;
 
     return dummy_head->next;
+}
+
+/**
+ * 203. Remove Linked List Elements
+ * @param head the head of a linked list.
+ * @param val all nodes with corresponding val must be removed
+ * @return the new head
+ */
+ListNode *removeElements(ListNode *head, int val) {
+    // 0 case
+    if (head == nullptr) { return head; }
+
+    ListNode dummyNode = ListNode(0, head);
+
+    ListNode *previous = &dummyNode;
+    ListNode *current = head;
+
+    while (current != nullptr) {
+        // Check if remove
+        if (current->val == val) {
+            previous->next = current->next;
+        } else {
+            // Only move if nothing removed because current then still exists
+            previous = current;
+        }
+
+        current = current->next;
+    }
+
+    return dummyNode.next;
+}
+
+/**
+ * 83. Remove Duplicates from Sorted List
+ * @param head the head of the linked list.
+ * @return a linked list only containing unique values.
+ */
+ListNode *deleteDuplicates(ListNode *head) {
+    // 0,1 case
+    if (head == nullptr || head->next == nullptr) { return head; }
+
+    // 2-n case
+    // No dummy node required because head never changes
+    ListNode *previous = head;
+    ListNode *current = head->next;
+
+    while (current != nullptr) {
+        if (previous->val == current->val) {
+            previous->next = current->next;
+        } else {
+            previous = current;
+        }
+        current = current->next;
+    }
+
+    return head;
 }
 
 #endif //CPPBASICS_LINKEDLIST_H

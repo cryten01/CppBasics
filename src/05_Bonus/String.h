@@ -3,6 +3,7 @@
 #define CPPBASICS_STRING_H
 
 #include <unordered_map>
+#include <stack>
 
 /**
  * 344. Reverse String
@@ -165,6 +166,34 @@ bool canConstruct(std::string ransomNote, std::string magazine) {
     }
 
     return true;
+}
+
+/**
+ * 20. Valid Parentheses
+ * @param s
+ * @return
+ */
+bool isValid(std::string s) {
+    std::stack<char> brackets;
+
+    for (char &c: s) {
+        if (c == '(' || c == '{' || c == '[') {
+            brackets.push(c);
+        } else if (c == ')' || c == '}' || c == ']') {
+            if (brackets.size() == 0) {
+                return false;
+            }
+
+            if ((brackets.top() == '(' && c == ')') || (brackets.top() == '{' && c == '}') ||
+                (brackets.top() == '[' && c == ']')) {
+                brackets.pop();
+            } else {
+                return false;
+            }
+        }
+    }
+
+    return brackets.size() == 0;
 }
 
 #endif //CPPBASICS_STRING_H

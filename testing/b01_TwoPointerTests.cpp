@@ -37,15 +37,39 @@ TEST(TwoPointerTests, MoveZeroesTest) {
 }
 
 TEST(TwoPointersTests, MergeSortedArrayTest) {
-    std::vector<int> nums1 = {1, 2, 3, 0, 0, 0};
-    std::vector<int> nums2 = {2, 5, 6};
-    std::vector<int> result = {1, 2, 2, 3, 5, 6};
+    std::vector<int> nums1;
+    std::vector<int> nums2;
+    std::vector<int> result;
+
+    // All empty
+    nums1 = {};
+    nums2 = {};
+    merge(nums1, 0, nums2, 0);
+    EXPECT_EQ(nums1, std::vector<int>{});
+
+    // nums2 empty
+    nums1 = {1};
+    nums2 = {};
+    merge(nums1, 1, nums2, 0);
+    EXPECT_EQ(nums1, std::vector<int>{1});
+
+    // nums1 empty (0 because only way to ensure fit)
+    nums1 = {0};
+    nums2 = {2};
+    merge(nums1, 0, nums2, 1);
+    EXPECT_EQ(nums1, std::vector<int>{2});
+
+    // Default
+    nums1 = {1, 2, 3, 0, 0, 0};
+    nums2 = {2, 5, 6};
+    result = {1, 2, 2, 3, 5, 6};
     merge(nums1, 3, nums2, 3);
     EXPECT_EQ(nums1, result);
 
-    std::vector<int> nums1b = {4, 5, 6, 0, 0, 0};
-    std::vector<int> nums2b = {1, 2, 3};
-    std::vector<int> resultb = {1, 2, 3, 4, 5, 6};
-    merge(nums1b, 3, nums2b, 3);
-    EXPECT_EQ(nums1b, resultb);
+    // Default 2
+    nums1 = {4, 5, 6, 0, 0, 0};
+    nums2 = {1, 2, 3};
+    result = {1, 2, 3, 4, 5, 6};
+    merge(nums1, 3, nums2, 3);
+    EXPECT_EQ(nums1, result);
 }

@@ -108,9 +108,9 @@ void moveZeroes(std::vector<int> &nums) {
 }
 
 /**
+ * 88. Merge Sorted Array
+ * Binary Search
  * Merges two arrays into nums1 in ascending order.
- * Sorts list partition with swapped elements so that the biggest 3 are in nums2
- * Inserts last elements from nums 2 into nums 1.
  * @param nums1 the list integer array sorted in ascending order.
  * @param m the number of elements in the list integer array.
  * @param nums2  the second integer array sorted in ascending order.
@@ -121,16 +121,20 @@ void merge(std::vector<int> &nums1, int m, std::vector<int> &nums2, int n) {
     int second = n - 1;
     int insert = m + n - 1;
 
+    // Loop until one array pointer is -1
     while (first >= 0 && second >= 0) {
         // Compare elements
         if (nums1[first] > nums2[second]) {
+            // Insert to empty slot
             nums1[insert] = nums1[first];
+            // Move back
             first--;
         } else {
             nums1[insert] = nums2[second];
             second--;
         }
 
+        // In each case change empty slot
         insert--;
     }
 
