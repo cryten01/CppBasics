@@ -6,32 +6,40 @@
 #include <unordered_map>
 
 /**
- *
+ * 977. Squares of a Sorted Array
  * @param nums the array that needs to be squared and sorted.
  * @return the sorted dynamic array containing the squared numbers in ascending order.
  */
 std::vector<int> sortedSquares(std::vector<int> &nums) {
-    // Create empty result array with n slots
+    // Create empty array with n slots other wise no [] operator possible
     std::vector<int> result(nums.size());
 
-    // Define pointers
-    int low = 0;
-    int high = nums.size() - 1;
-    int current = nums.size() - 1;
+    int first = 0;
+    int last = nums.size() - 1;
+    int current = last;
 
-    while (low <= high) {
-        // Take number from either left or right partition
-        // By checking if number is smaller or bigger
-        if (abs(nums[low]) > abs(nums[high])) {
-            result[current] = nums[low] * nums[low];
-            low++;
+    int firstEl;
+    int lastEl;
+
+    // Loop through nums
+    while(first <= last) {
+        // Compare biggest elements of each side and insert bigger one at back
+        // Move pointer in corresponding direction
+        firstEl = abs(nums[first]);
+        lastEl = abs(nums[last]);
+
+        if (firstEl > lastEl) {
+            result[current] = firstEl * firstEl;
+            first++;
         } else {
-            result[current] = nums[high] * nums[high];
-            high--;
+            result[current] = lastEl * lastEl;
+            last--;
         }
 
+        // Because last positioned element is already correct
         current--;
     }
+
     return result;
 }
 

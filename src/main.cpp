@@ -7,7 +7,6 @@
 int main(int argc, char *argv[]) {
 
     ShowBinaryExamples();
-    MoveZeroesTest();
 
     // 0 means correct execution here
     return 0;

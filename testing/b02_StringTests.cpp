@@ -66,3 +66,12 @@ TEST(StringTests, ValidParenthesis) {
     EXPECT_TRUE(isValid("(){}[]"));
     EXPECT_FALSE(isValid("(]"));
 }
+
+TEST(StringTests, LengthOfLongestSubstring) {
+    EXPECT_EQ(lengthOfLongestSubstring("abcabcbb"), 3);
+    EXPECT_EQ(lengthOfLongestSubstring(" "), 1);
+    EXPECT_EQ(lengthOfLongestSubstring("tmmzuxt"), 5);
+}
+TEST(StringTests, PermutationInString) {
+    EXPECT_TRUE(checkInclusion("ab","eidbaooo"));
+}

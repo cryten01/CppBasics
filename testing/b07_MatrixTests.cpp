@@ -17,7 +17,7 @@ TEST(MatrixTests, FloodFill) {
     EXPECT_EQ(image, solution);
 }
 
-TEST(MatrixTests, MaxAreaOfIsland) {
+TEST(MatrixTests, SearchA2DMatrix) {
     vector<vector<int>> matrix = {{1,  3,  5,  7},
                                   {10, 11, 16, 20},
                                   {23, 30, 34, 60}};
@@ -54,5 +54,33 @@ TEST(MatrixTests, RottenOranges) {
     matrix = {{1, 2}};
     result = orangesRotting(matrix);
     EXPECT_EQ(result, 1);
+}
 
+TEST(MatrixTests, MaxAreaOfIsland) {
+    // TODO
+}
+
+TEST(MatrixTests, M01Matrix) {
+    // TODO
+}
+
+TEST(MatrixTests, ReshapeTheMatrix) {
+    // TODO
+    vector<vector<int>> matrix = {{1, 2},
+                                  {3, 4}};
+    vector<vector<int>> solution = {{1, 2, 3, 4}};
+    EXPECT_EQ(matrixReshape(matrix, 1, 4), solution);
+}
+
+TEST(MatrixTests, IsValidSudoku) {
+    vector<vector<char>> board = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+                                  {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+                                  {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+                                  {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+                                  {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+                                  {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+                                  {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+                                  {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+                                  {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+    EXPECT_TRUE(isValidSudoku(board));
 }

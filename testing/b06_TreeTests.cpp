@@ -114,12 +114,23 @@ protected:
 
 TEST_F(LCTreeTests, MaxDepth) {
     // Default
-    EXPECT_EQ(maxDepth(root), 3);
+    EXPECT_EQ(maxDepthRecursive(root), 3);
+    EXPECT_EQ(maxDepthIterative(root), 3);
 }
 
-TEST(LCTreeTests, ValidBST) {
-    TreeNode *tree = new TreeNode(0);
-    EXPECT_TRUE(isValidBST(tree));
+TEST_F(LCTreeTests, ValidBST) {
+    // Correct
+    TreeNode tree = TreeNode(0);
+    EXPECT_TRUE(isValidBST(&tree));
+
+    TreeNode left = TreeNode(1);
+    TreeNode right = TreeNode(3);
+    tree = TreeNode(2, &left, &right);
+    EXPECT_TRUE(isValidBSTRec(&tree));
+
+    // Max Int
+    tree = TreeNode(2147483647);
+    EXPECT_TRUE(isValidBSTRec(&tree));
 }
 
 TEST_F(LCTreeTests, LevelOrder) {
@@ -144,3 +155,63 @@ TEST_F(LCTreeTests, ConnectNext) {
     // TODO:
 }
 
+TEST_F(LCTreeTests, PreorderTraversal) {
+    TreeNode *root = GenerateLevelOrderTree({1, NULL, 2, 3});
+    std::vector<int> solution = preorderTraversal(root);
+    EXPECT_EQ(solution, (std::vector<int>{1, 2, 3}));
+}
+
+TEST_F(LCTreeTests, InorderTraversal) {
+    TreeNode *root = GenerateLevelOrderTree({1, NULL, 2, 3});
+    std::vector<int> solution = inorderTraversal(root);
+    EXPECT_EQ(solution, (std::vector<int>{1, 3, 2}));
+}
+
+TEST_F(LCTreeTests, PostorderTraversal) {
+    TreeNode l2{3, NULL, NULL};
+    TreeNode l1{2, &l2, NULL};
+    TreeNode root{1, NULL, &l1};
+
+    std::vector<int> result = postorderTraversalIT(&root);
+    std::vector<int> solution = {3, 2, 1};
+    EXPECT_EQ(result, solution);
+}
+
+TEST_F(LCTreeTests, SymmetricTree) {
+    // TODO:
+    TreeNode root{1, NULL, NULL};
+    EXPECT_TRUE(isSymmetric(&root));
+}
+
+TEST_F(LCTreeTests, InvertBST) {
+    // TODO:
+}
+
+TEST_F(LCTreeTests, PathSum) {
+    // TODO:
+    // Empty
+    // False
+    // True
+    // Negative
+    // Just root
+
+}
+
+TEST_F(LCTreeTests, SearchBST) {
+    // TODO: fix
+    TreeNode *root = GenerateLevelOrderTree({4, 2, 7, 1, 3});
+    TreeNode *solution = GenerateLevelOrderTree({2, 1, 3});
+    Compare(root, solution);
+}
+
+TEST_F(LCTreeTests, InsertIntoBST) {
+    // TODO:
+}
+
+TEST_F(LCTreeTests, InputIsABST) {
+    // TODO:
+}
+
+TEST_F(LCTreeTests, LowestCommonAncestor) {
+    // TODO:
+}

@@ -1,13 +1,13 @@
 
-#ifndef CPPBASICS_LARRAY_H
-#define CPPBASICS_LARRAY_H
+#ifndef CPPBASICS_ARRAY_H
+#define CPPBASICS_ARRAY_H
 
 #include <vector>
 #include <unordered_map>
 #include <iostream>
 
 /**
- *
+ * 189. Rotate Array
  * @param nums
  * @param k
  */
@@ -44,26 +44,6 @@ void rotate(std::vector<int> &nums, int k) {
 }
 
 /**
- * Finds the contiguous subarray (containing at least one number) which has the largest sum.
- * See Kadane's Algorithm (O(n)). Alternative: Bruteforce (O(n^2))
- * @param nums the dynamic array containing the numbers
- * @return the sum of largest numbers;
- */
-int maxSubArray(std::vector<int> &nums) {
-    int max = nums[0];
-    int current = max;
-
-    for (int i = 1; i < nums.size(); i++) {
-        // Check if current sum + new num > new num
-        current = std::max(current + nums[i], nums[i]);
-        // Check if we have a new max
-        max = std::max(current, max);
-    }
-
-    return max;
-}
-
-/**
  * 350. Intersection of Two Arrays II
  * @param nums1
  * @param nums2
@@ -85,22 +65,6 @@ std::vector<int> intersect(std::vector<int> &nums1, std::vector<int> &nums2) {
             frequency[nums2[i]] -= 1;
             result.push_back(nums2[i]);
         }
-    }
-
-    return result;
-}
-
-/**
- *
- * @param nums the target that needs to be searched. Must contain at least 1 number and/or 1 unique number.
- * @return the index of the unique number
- */
-int singleNumber(std::vector<int> &nums) {
-    int result = 0;
-
-    for (int i = 0; i < nums.size(); ++i) {
-        // XOR bit manipulation
-        result ^= nums[i];
     }
 
     return result;
@@ -139,4 +103,4 @@ int search(std::vector<int> &nums, int target) {
     return -1;
 }
 
-#endif //CPPBASICS_LARRAY_H
+#endif //CPPBASICS_ARRAY_H

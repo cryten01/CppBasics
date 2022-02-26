@@ -1,23 +1,10 @@
 #include <gtest/gtest.h>
-#include "../src/05_Bonus/LArray.h"
+#include "../src/05_Bonus/Array.h"
 
 TEST(LArrayTests, Intersect) {
     std::vector<int> nums1 = {1, 2, 2, 1};
     std::vector<int> nums2 = {2, 2};
     EXPECT_EQ(intersect(nums1, nums2), (std::vector<int>{2, 2}));
-}
-
-TEST(LArrayTests, MaxSubArray) {
-    std::vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-    int solution = maxSubArray(nums);
-    EXPECT_EQ(solution, 6);
-    nums = {1};
-    solution = maxSubArray(nums);
-    EXPECT_EQ(solution, 1);
-}
-
-TEST(LArrayTests, SingleNumber) {
-
 }
 
 TEST(LArrayTests, Rotate) {

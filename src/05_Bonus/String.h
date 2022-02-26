@@ -4,6 +4,7 @@
 
 #include <unordered_map>
 #include <stack>
+#include <unordered_map>
 
 /**
  * 344. Reverse String
@@ -194,6 +195,77 @@ bool isValid(std::string s) {
     }
 
     return brackets.size() == 0;
+}
+
+/**
+ * 3. Longest Substring Without Repeating Characters
+ * Sliding window technique
+ * @param s
+ * @return
+ */
+int lengthOfLongestSubstring(std::string s) {
+    // Use set because only existence in set is relevant
+    std::set<char> charSet;
+
+    int left = 0;
+    int right = 0;
+    int max = 0;
+
+    for (char c: s) {
+        // We found a duplicate
+        while (charSet.count(c)) {
+            // Remove all following chars until duplicate is found
+            charSet.erase(c);
+            // Reduce sliding window
+            left++;
+        }
+        // Insert new char
+        charSet.emplace(c);
+        // Compare new max with old one
+        max = std::max(max, right - left + 1);
+        // Iteration step
+        right++;
+    }
+
+    return max;
+}
+
+/**
+ * 567. Permutation in String
+ * @param s1
+ * @param s2
+ * @return
+ */
+bool checkInclusion(std::string s1, std::string s2) {
+    // Permutation = consequtive row of char that only occur once
+    // Break if letter not in map (either because of duplicates or wrong entirely)
+    // If wrong reset map because row is broken
+    std::unordered_map<char,int> frequencyMap;
+    std::unordered_map<char,int> originalMap;
+
+    // Populate map
+    for (char& c : s1) {
+        originalMap[c]++;
+    }
+
+    frequencyMap = originalMap;
+
+    for (char& c : s2) {
+        // Wrong letter or all used
+        if (frequencyMap.count(c) == 0) {
+            frequencyMap = originalMap;
+        } else {
+            if (frequencyMap[c] > 1) {
+                frequencyMap[c]--;
+            } else {
+                frequencyMap.erase(c);
+            }
+
+            if (frequencyMap.size() == 0) {return true;}
+        }
+    }
+
+    return false;
 }
 
 #endif //CPPBASICS_STRING_H

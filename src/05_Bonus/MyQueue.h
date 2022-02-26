@@ -1,6 +1,6 @@
 
-#ifndef CPPBASICS_QUEUE_H
-#define CPPBASICS_QUEUE_H
+#ifndef CPPBASICS_MYQUEUE_H
+#define CPPBASICS_MYQUEUE_H
 
 #include <stack>
 
@@ -38,4 +38,6 @@ private:
     std::stack<int> output;
 };
 
-#endif //CPPBASICS_QUEUE_H
+
+
+#endif //CPPBASICS_MYQUEUE_H
