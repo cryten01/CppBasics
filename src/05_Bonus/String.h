@@ -2,21 +2,29 @@
 #ifndef CPPBASICS_STRING_H
 #define CPPBASICS_STRING_H
 
+using namespace std;
+
 #include <unordered_map>
 #include <stack>
 #include <unordered_map>
+#include <set>
 
 /**
  * 344. Reverse String
+ * Two Pointers
  * @param s the string that needs to be reversed.
  */
 void reverseString(std::vector<char> &s) {
-    if (s.size() <= 1) return;
+    // Return if no swap possbile
+    if (s.size() < 2) { return; }
 
-    int i = 0;
-    while (i < (s.size() + 1) / 2) {
-        std::swap(s[i], s[s.size() - 1 - i]);
-        i++;
+    int left = 0;
+    int right = s.size() - 1;
+
+    while (left < right) {
+        swap(s[left], s[right]);
+        left++;
+        right--;
     }
 }
 

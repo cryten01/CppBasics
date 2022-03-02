@@ -14,17 +14,29 @@ protected:
 };
 
 TEST(TwoPointerTests, SortedSquaresTest) {
-    // array size 0,1,n
-    // duplicates y/n
-    std::vector<int> nums = {-4, -1, 0, 3, 10};
-    nums = sortedSquares(nums);
-    EXPECT_EQ(nums, (std::vector<int>{0, 1, 9, 16, 100}));
+    // Default
+    std::vector<int> nums;
+    nums = {-4, -1, 0, 3, 10};
+    EXPECT_EQ(sortedSquares(nums), (vector<int>{0, 1, 9, 16, 100}));
+    // 1 case
+    nums = {5};
+    EXPECT_EQ(sortedSquares(nums), vector<int>{25});
+    // Identical squared
+    nums = {-7, -3, 2, 3, 11};
+    EXPECT_EQ(sortedSquares(nums), (vector<int>{4,9,9,49,121}));
 }
 
 TEST(TwoPointerTests, TwoSumTest) {
-    std::vector<int> nums = {2, 3, 4};
-    std::vector<int> solution = twoSum(nums, 6);
-    EXPECT_EQ(solution, std::vector({1, 3}));
+    std::vector<int> nums;
+    // Default
+    nums = {2, 3, 4};
+    EXPECT_EQ(twoSum(nums, 6), (vector<int>({1, 3})));
+    // Negative
+    nums = {-1, -2, 0};
+    EXPECT_EQ(twoSum(nums, -3), vector<int>({1,2}));
+    // Invalid target
+    nums = {1,2,3,4};
+    EXPECT_EQ(twoSum(nums, 20), vector<int>({}));
 }
 
 TEST(TwoPointerTests, MoveZeroesTest) {

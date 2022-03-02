@@ -2,6 +2,8 @@
 #ifndef CPPBASICS_TREE_H
 #define CPPBASICS_TREE_H
 
+using namespace std;
+
 #include <stack>
 #include <queue>
 #include <algorithm>
@@ -249,26 +251,26 @@ TreeNode *sortedArrayToBST(std::vector<int> &nums) {
 
 /**
  * 617. Merge Two Binary Trees
- * Traversing tree using Depth First Search
+ * Recursive Depth First Search
  * @param root1
  * @param root2
  * @return
  */
 TreeNode *mergeTrees(TreeNode *root1, TreeNode *root2) {
     // Use root2 only
-    if (root1 == NULL) {
+    if (root1 == nullptr) {
         return root2;
     }
 
     // Use root1 only
-    if (root2 == NULL) {
+    if (root2 == nullptr) {
         return root1;
     }
 
     // Merge roots
     root1->val += root2->val;
 
-    // Check subtrees
+    // Process subtrees
     root1->left = mergeTrees(root1->left, root2->left);
     root1->right = mergeTrees(root1->right, root2->right);
 
@@ -318,6 +320,56 @@ Node *connect(Node *root) {
 }
 
 /**
+ * 116. Populating Next Right Pointers in Each Node
+ * Iterative BFS
+ * @param root
+ * @return
+ */
+Node* connectIterative(Node* root) {
+    // 0 case
+    if (root == nullptr) {return root;}
+
+    queue<Node*> nodeQueue;
+
+    // Push first element
+    nodeQueue.push(root);
+
+    // Using dummy node in order to avoid starting edge case
+    Node dummy(-1);
+
+    // BFS (level order approach)
+    while (!nodeQueue.empty()) {
+        // Capture current level size
+        int levelSize = nodeQueue.size();
+        Node* previous = &dummy;
+        Node* current = nullptr;
+
+        // For each node
+        for (int i = 0; i < levelSize; i++) {
+            // Pop element from the queue
+            current = nodeQueue.front();
+            nodeQueue.pop();
+
+            // Pushing left child
+            if (current->left) {
+                nodeQueue.push(current->left);
+            }
+
+            // Pushing right child
+            if (current->right) {
+                nodeQueue.push(current->right);
+            }
+
+            // Iteration step
+            previous->next = current;
+            previous = current;
+        }
+    }
+
+    return root;
+}
+
+/**
  *
  * @param root the trees root (height == 0)
  * @return
@@ -331,33 +383,33 @@ int GetHeight(Node *root) {
 }
 
 /**
- * 144. Binary Tree Preorder Traversal (node, left, right)
+ * 144. Binary Tree Preorder (easy)
+ * Iterative DFS Preorder (node, left, right)
  * @param root
  * @return
  */
-std::vector<int> preorderTraversal(TreeNode *root) {
-    std::vector<int> result{};
+vector<int> preorderTraversal(TreeNode *root) {
+    vector<int> result{};
 
     if (root == nullptr) return result;
 
-    std::stack<TreeNode *> stack;
+    // Performing DFS
+    stack<TreeNode *> stack;
     stack.push(root);
 
-    TreeNode *temp;
-
+    TreeNode *current;
     while (!stack.empty()) {
         // Process root
-        temp = stack.top();
+        current = stack.top();
         stack.pop();
+        result.push_back(current->val);
 
-        result.push_back(temp->val);
-
-        // Reverse order because last in first out
-        if (temp->right != nullptr) {
-            stack.push(temp->right);
+        // Reverse order (because last in first out)
+        if (current->right != nullptr) {
+            stack.push(current->right);
         }
-        if (temp->left != nullptr) {
-            stack.push(temp->left);
+        if (current->left != nullptr) {
+            stack.push(current->left);
         }
     }
 
@@ -365,37 +417,47 @@ std::vector<int> preorderTraversal(TreeNode *root) {
 }
 
 /**
- * 94. Binary Tree Inorder Traversal (left, node, right)
+ * 94. Binary Tree Inorder Traversal (easy)
+ * Iterative DFS Inorder (left, node, right)
  * @param root
  * @return
  */
 std::vector<int> inorderTraversal(TreeNode *root) {
-    std::vector<int> result{};
+    vector<int> result{};
 
     if (root == nullptr) return result;
 
-    std::stack<TreeNode *> stack;
-    TreeNode *temp = root;
+    stack<TreeNode *> stack;
+    TreeNode *current = root;
 
-    while (temp != nullptr || !stack.empty()) {
-        // Traverse all the way to the left side
-        while (temp != nullptr) {
-            stack.push(temp);
-            temp = temp->left;
+    // Check current because left subtree can be empty or processed
+    // but current moved to the right
+    while (current != nullptr || !stack.empty()) {
+
+        // Go all the way to the left
+        while (current != nullptr) {
+            stack.push(current);
+            current = current->left;
         }
 
         // Process root
-        temp = stack.top();
+        current = stack.top();
         stack.pop();
-        result.push_back(temp->val);
+        result.push_back(current->val);
 
-        // Reverse order because last in first out
-        temp = temp->right;
+        // Go to the right
+        current = current->right;
     }
 
     return result;
 }
 
+/**
+ * 145. Binary Tree Postorder Traversal (easy)
+ * Helper method
+ * @param root
+ * @param result
+ */
 void postorder(TreeNode *root, std::vector<int> &result) {
     if (root == nullptr) { return; }
 
@@ -405,19 +467,20 @@ void postorder(TreeNode *root, std::vector<int> &result) {
 }
 
 /**
- * 145. Binary Tree Postorder Traversal (left, right, root)
+ * 145. Binary Tree Postorder Traversal (easy)
+ * Recursive DFS Postorder (left, right, root)
  * @param root
  * @return
  */
-std::vector<int> postorderTraversalRec(TreeNode *root) {
-    std::vector<int> result{};
+vector<int> postorderTraversalRec(TreeNode *root) {
+    vector<int> result{};
     postorder(root, result);
     return result;
 }
 
 /**
- * 145. Binary Tree Postorder Traversal (left, right, root)
- * DFS
+ * 145. Binary Tree Postorder Traversal (easy)
+ * Iterative DFS Postorder (left, right, root)
  * @param root
  * @return
  */
@@ -449,6 +512,13 @@ std::vector<int> postorderTraversalIT(TreeNode *root) {
     return result;
 }
 
+/**
+ * 101. Symmetric Tree
+ * Helper
+ * @param root1
+ * @param root2
+ * @return
+ */
 bool traverseSubtree(TreeNode *root1, TreeNode *root2) {
     if (root1 == nullptr && root2 == nullptr) { return true; }
     if (root1 == nullptr || root2 == nullptr) { return false; }

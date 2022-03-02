@@ -14,13 +14,13 @@ struct ListNode {
 };
 
 /**
- * 206. Reverse Linked List
+ * 206. Reverse Linked List (easy)
  * @param head the starting node.
  * @return the new head of the linked list.
  */
 ListNode *reverseList(ListNode *head) {
     // Case: 0, 1
-    if (head == nullptr) return head;
+    if (head == nullptr || head->next == nullptr) return head;
 
     // Case: 2-n
     ListNode *previous = nullptr;
@@ -37,71 +37,6 @@ ListNode *reverseList(ListNode *head) {
     }
 
     return previous;
-}
-
-/**
- * Merge Two Sorted Lists
- * @param list1 the list sorted linked list with n elements.
- * @param list2 the second sorted linked list with n elements.
- * @return list1 now containing all elements of both lists in a sorted manner.
- */
-ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
-    // Use dummy node to avoid edge cases (0,1) because head can change
-    ListNode dummy(INT_MIN);
-    ListNode *tail = &dummy;
-
-    // Traverse both lists at the same time
-    while (list1 != nullptr && list2 != nullptr) {
-        // Smaller or bigger/equal
-        if (list1->val < list2->val) {
-            // Insert
-            tail->next = list1;
-            // Move list1 pointer
-            list1 = list1->next;
-        } else {
-            // Insert
-            tail->next = list2;
-            // Move list2 pointer
-            list2 = list2->next;
-        }
-
-        // Iteration step
-        tail = tail->next;
-    }
-
-    // Append the rest
-    if (list1 != nullptr) {
-        tail->next = list1;
-    } else if (list2 != nullptr) {
-        tail->next = list2;
-    }
-
-    // Returns dummy.next which is actual starting value
-    // Dummy gets deleted when out of scope because allocated on stack
-    return dummy.next;
-}
-
-/**
- * Linked List Cycle (very common!)
- * @param head
- * @return
- */
-bool hasCycle(ListNode *head) {
-    // 0 case
-    if (head == nullptr || head->next == nullptr) return false;
-
-    ListNode *slow = head;
-    ListNode *fast = head;
-
-    // Possible because 1 slow cycle == 2 fast cycles if cycle exists
-    while (fast->next && fast->next->next) {
-        slow = slow->next;
-        fast = fast->next->next;
-
-        if (slow == fast) return true;
-    }
-
-    return false;
 }
 
 /**
@@ -127,14 +62,160 @@ ListNode *middleNode(ListNode *head) {
 }
 
 /**
- * 19. Remove Nth Node From End of List
+ * 21. Merge Two Sorted Lists (easy)
+ * Two Pointer
+ * @param list1 the list sorted linked list with n elements.
+ * @param list2 the second sorted linked list with n elements.
+ * @return listBase now containing all elements of both lists in a sorted manner.
+ */
+ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
+    // Use dummy node to avoid edge cases (0,1) because head can change
+    ListNode dummy(INT_MIN);
+    ListNode *tail = &dummy;
+
+    // Traverse both lists at the same time
+    while (list1 != nullptr && list2 != nullptr) {
+        // Pick list node with smaller value
+        if (list1->val < list2->val) {
+            tail->next = list1;
+            list1 = list1->next;
+        } else {
+            tail->next = list2;
+            list2 = list2->next;
+        }
+
+        // Iteration step
+        tail = tail->next;
+    }
+
+    // Append the rest
+    if (list1 != nullptr) {
+        tail->next = list1;
+    } else if (list2 != nullptr) {
+        tail->next = list2;
+    }
+
+    // Returns dummy.next which is actual head
+    // Dummy gets deleted when out of scope because allocated on stack
+    return dummy.next;
+}
+
+
+/**
+ * 148. Sort List (medium) - Helper function
+ * Merge Sort, Two pointer
+ * Merges both lists by linking them together.
+ * @param list1
+ * @param list2
+ */
+ListNode *merge(ListNode *list1, ListNode *list2) {
+
+    ListNode dummy;
+    ListNode *current = &dummy;
+
+    while (list1 != nullptr && list2 != nullptr) {
+        // Choose smaller one
+        if (list1->val < list2->val) {
+            current->next = list1;
+            list1 = list1->next;
+        } else {
+            current->next = list2;
+            list2 = list2->next;
+        }
+
+        current = current->next;
+    }
+
+    // Append rest
+    if (list1 != nullptr) {
+        current->next = list1;
+    }
+    if (list2 != nullptr) {
+        current->next = list2;
+    }
+
+    return dummy.next;
+}
+
+/**
+ * 148. Sort List (medium) - Helper function
+ * Slow/Fast Two pointer
+ * Finds the mid by iterating through the entire list.
+ * @param head
+ * @return
+ */
+ListNode *getMid(ListNode *head) {
+    ListNode *slow = head;
+    ListNode *fast = head->next;
+
+    while (fast && fast->next) {
+        fast = fast->next->next;
+        slow = slow->next;
+    }
+
+    return slow;
+}
+
+/**
+ * 148. Sort List (medium)
+ * @param head
+ * @return
+ */
+ListNode *sortList(ListNode *head) {
+    // Base case: 0
+    if (head == nullptr || head->next == nullptr) { return head; }
+
+    ListNode *left = head;
+    ListNode *right = getMid(head);
+
+    // Splits list
+    ListNode *temp = right->next;
+    right->next = nullptr;
+    right = temp;
+
+    // Recursive steps
+    left = sortList(left);
+    right = sortList(right);
+
+    // Finally, merge lists
+    return merge(left, right);
+}
+
+/**
+ * 141. Linked List Cycle (easy, very common)
+ * Floyd's Tortoise and Hare
+ * @param head
+ * @return
+ */
+bool hasCycle(ListNode *head) {
+    // 0 case
+    if (head == nullptr || head->next == nullptr) return false;
+
+    ListNode *slow = head;
+    ListNode *fast = head;
+
+    // Possible because 1 slow cycle == 2 fast cycles if cycle exists
+    while (fast->next && fast->next->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        // Node is visited twice
+        if (slow == fast) return true;
+    }
+
+    return false;
+}
+
+/**
+ * 19. Remove Nth Node From End of List (medium)
+ * Slow/Fast Two pointer
  * @param head
  * @param n
  * @return
  */
 ListNode *removeNthFromEnd(ListNode *head, int n) {
-    ListNode *dummy_head = new ListNode(0, head);
-    ListNode *slow = dummy_head;
+    ListNode dummy_head(0, head);
+    ListNode *slow = &dummy_head;
     ListNode *fast = head;
 
     // Move fast pointer n steps forward
@@ -152,7 +233,7 @@ ListNode *removeNthFromEnd(ListNode *head, int n) {
     // Delete node
     slow->next = slow->next->next;
 
-    return dummy_head->next;
+    return dummy_head.next;
 }
 
 /**

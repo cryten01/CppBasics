@@ -27,8 +27,19 @@ TEST(BinayTests, ReverseBits) {
 
 TEST(BinayTests, SingleNumber) {
     // TODO
-    std::vector<int> numbers = {2,2,1};
+    std::vector<int> numbers = {2, 2, 1};
     EXPECT_EQ(singleNumber(numbers), 1);
-    numbers = {4,1,2,1,2};
+    numbers = {4, 1, 2, 1, 2};
     EXPECT_EQ(singleNumber(numbers), 4);
+}
+
+TEST(BinaryTests, MissingNumber) {
+    std::vector<int> numbers = {3, 0, 1};
+    EXPECT_EQ(missingNumber(numbers), 2);
+    numbers = {1, 2, 3, 4};
+    EXPECT_EQ(missingNumber(numbers), 0);
+}
+
+TEST(BinaryTests, CountingBits) {
+    EXPECT_EQ(countBits(2), (std::vector<int>{0, 1, 1}));
 }

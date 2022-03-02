@@ -2,6 +2,8 @@
 #ifndef CPPBASICS_TWOPOINTERS_H
 #define CPPBASICS_TWOPOINTERS_H
 
+using namespace std;
+
 #include <vector>
 #include <unordered_map>
 
@@ -11,87 +13,64 @@
  * @return the sorted dynamic array containing the squared numbers in ascending order.
  */
 std::vector<int> sortedSquares(std::vector<int> &nums) {
-    // Create empty array with n slots other wise no [] operator possible
-    std::vector<int> result(nums.size());
+    vector<int> result(nums.size());
 
-    int first = 0;
-    int last = nums.size() - 1;
-    int current = last;
+    if (nums.size() == 0) {return result; }
 
-    int firstEl;
-    int lastEl;
+    int left = 0;
+    int right = nums.size() - 1;
 
-    // Loop through nums
-    while(first <= last) {
-        // Compare biggest elements of each side and insert bigger one at back
-        // Move pointer in corresponding direction
-        firstEl = abs(nums[first]);
-        lastEl = abs(nums[last]);
+    // For each insertion
+    for (int i = 0; i < nums.size(); i++) {
+        // Obtain squared numbers
+        int nl = nums[left] * nums[left];
+        int nr = nums[right] * nums[right];
 
-        if (firstEl > lastEl) {
-            result[current] = firstEl * firstEl;
-            first++;
+        // Comparisons
+        if (nl < nr) {
+            result[nums.size() - 1 - i] = nr;
+            right--;
+        } else if (nl > nr) {
+            result[nums.size() - 1 - i] = nl;
+            left++;
         } else {
-            result[current] = lastEl * lastEl;
-            last--;
+            result[nums.size() - 1 - i] = nl;
+            left++;
         }
-
-        // Because last positioned element is already correct
-        current--;
     }
 
     return result;
 }
 
 /**
- * Two Sum II - Input Array is Sorted
+ * 167. Two Sum II - Input Array Is Sorted
  * @param numbers an unordered array containing the numbers.
  * @param target the target sum.
- * @return the vector containing the two relevant numbers.
+ * @return the vector containing the two relevant index values + 1.
  */
 std::vector<int> twoSum(std::vector<int> &numbers, int target) {
+    vector<int> result;
 
-    int first = 0;
-    int second = numbers.size() - 1;
-    int sum;
+    if (numbers.size() < 2) {return result;}
 
-    while (first < second) {
-        sum = numbers[first] + numbers[second];
+    int left = 0;
+    int right = numbers.size() - 1;
 
-        if (sum == target) {
+    while (left < right) {
+        int sum = numbers[left] + numbers[right];
+
+        if (sum > target) {
+            right--;
+        } else if (sum < target) {
+            left++;
+        } else {
+            result.push_back(left + 1);
+            result.push_back(right + 1);
             break;
-        }
-            // Smaller
-        else if (sum < target) {
-            first++;
-        }
-            // Bigger
-        else {
-            second--;
         }
     }
 
-    // Because 1 indexed array
-    return std::vector<int>{first + 1, second + 1};
-
-
-//    // Stores key: number and value: index
-//    std::unordered_map<int, int> numMap;
-//
-//    // Iterate over each element
-//    for (int i = 0; i < numbers.size(); ++i) {
-//        int complement = target - numbers[i];
-//
-//        // Check if we have complement
-//        if (numMap.count(complement)) {
-//            return std::vector<int>{numMap.find(complement)->second, i};
-//        }
-//
-//        // Insert the new number-index pair
-//        numMap[numbers[i]] = i;
-//    }
-//
-//    return std::vector<int>{-1, -1};
+    return result;
 }
 
 /**

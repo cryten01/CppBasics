@@ -2,6 +2,8 @@
 #ifndef CPPBASICS_DYNAMICPROGRAMMING_H
 #define CPPBASICS_DYNAMICPROGRAMMING_H
 
+using namespace std;
+
 #include <vector>
 
 /**
@@ -84,6 +86,25 @@ int climbStairs(int n) {
 }
 
 /**
+ * 746. Min Cost Climbing Stairs
+ * @param cost
+ * @return
+ */
+int minCostClimbingStairs(vector<int>& cost) {
+    // 0,1 case
+    if (cost.size() == 0) {return 0;}
+    if (cost.size() == 1) {return cost[0];}
+
+    // 3-n case
+    for (int i = 2; i < cost.size(); i++) {
+        cost[i] += min(cost[i-1], cost[i-2]);
+    }
+
+    // Return min of last two elements
+    return min(cost[cost.size()-1], cost[cost.size()-2]);
+}
+
+/**
  * House Robber
  * @param nums
  * @return
@@ -127,5 +148,64 @@ int maxSubArray(std::vector<int> &nums) {
 
     return max;
 }
+
+/**
+ * 300. Longest Increasing Subsequence
+ * Medium
+ * @param nums
+ * @return
+ */
+int lengthOfLIS(vector<int>& nums) {
+    // Find all results from numbers < current
+    // Choose max and add +1
+
+    vector<int> lengths(nums.size(), 1);
+    int max_all = 1;
+
+    for (int i = 1; i < nums.size(); i++) {
+        int max = 0;
+
+        for (int j = i - 1; j >= 0; j--) {
+            // Only consider smaller elements
+            if (nums[j] < nums[i]) {
+                // Max check
+                max = lengths[j] > max ? lengths[j] : max;
+            }
+        }
+
+        lengths[i] = 1 + max;
+        max_all = lengths[i] > max_all ? lengths[i] : max_all;
+    }
+
+    return max_all;
+}
+
+/**
+ * 322. Coin Change
+ * @param coins
+ * @param amount
+ * @return
+ */
+int coinChange(vector<int>& coins, int amount) {
+    // Check remainder for every coin
+    vector<int> coinAmount(amount + 1, INT_MAX - 10);
+
+    // 0 is always zero
+    coinAmount[0] = 0;
+
+    // Store min amount of coins for each value
+    for (int i = 1; i <= amount; i++) {
+        // Check solution for every possible additional coin
+        for (int& coin : coins) {
+            int remainder = i - coin;
+            if (remainder >= 0) {
+                coinAmount[i] =  min(coinAmount[i], 1 + coinAmount[remainder]);
+            }
+        }
+    }
+
+    return coinAmount[amount] != INT_MAX - 10 ? coinAmount[amount] : -1 ;
+}
+
 
 #endif //CPPBASICS_DYNAMICPROGRAMMING_H

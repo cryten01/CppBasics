@@ -27,6 +27,10 @@ TEST(DynamicProgrammingTests, ClimbStairs) {
     EXPECT_EQ(climbStairs(3), 3);
 }
 
+TEST(DynamicProgrammingTests, MinCostClimingStairs) {
+    // TODO
+}
+
 TEST(DynamicProgrammingTests, HouseRobber) {
     std::vector<int> nums;
 
@@ -38,7 +42,7 @@ TEST(DynamicProgrammingTests, HouseRobber) {
     EXPECT_EQ(rob(nums), 12);
 }
 
-TEST(LArrayTests, MaxSubArray) {
+TEST(DynamicProgrammingTests, MaxSubArray) {
     std::vector<int> nums;
     int solution;
 
@@ -48,4 +52,16 @@ TEST(LArrayTests, MaxSubArray) {
     nums = {1};
     solution = maxSubArray(nums);
     EXPECT_EQ(solution, 1);
+}
+
+TEST(DynamicProgrammingTests, LongestIncreasingSubsequence) {
+    vector<int> nums = {10, 9, 2, 5, 3, 7, 101, 18};
+    EXPECT_EQ(lengthOfLIS(nums), 4);
+    nums = {0, 1, 0, 3, 2, 3};
+    EXPECT_EQ(lengthOfLIS(nums), 4);
+}
+
+TEST(DynamicProgrammingTests, CoinChange){
+    vector<int> nums = {1,2,5};
+    EXPECT_EQ(coinChange(nums, 11), 3);
 }

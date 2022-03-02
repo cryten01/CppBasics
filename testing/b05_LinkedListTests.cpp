@@ -4,18 +4,18 @@
 class LCLinkedListTests : public testing::Test {
 protected:
     void SetUp() override {
-        list = GenerateList({0, 1, 2, 3});
-        list2 = GenerateList({1, 2, 4});
-        list3 = GenerateList({1, 3, 4});
+        listBase = GenerateList({0, 1, 2, 3});
+        listEmpty = GenerateList({});
+        listSingle = GenerateList({1});
     }
 
     void TearDown() override {
-        delete list;
-        list = nullptr;
-        delete list2;
-        list2 = nullptr;
-        list3 = nullptr;
-        delete list3;
+        delete listBase;
+        listBase = nullptr;
+        delete listEmpty;
+        listEmpty = nullptr;
+        delete listSingle;
+        listSingle = nullptr;
     }
 
     ListNode *GenerateList(std::vector<int> numbers) {
@@ -55,28 +55,31 @@ protected:
         }
     }
 
-    ListNode *list;
-    ListNode *list2;
-    ListNode *list3;
+    ListNode *listBase;
+    ListNode *listEmpty;
+    ListNode *listSingle;
 };
 
 TEST_F(LCLinkedListTests, ReverseLinkedList) {
     ListNode *list;
 
     // Default (2-n)
-    list = GenerateList({0, 1, 2, 3});
-    list = reverseList(list);
-    CheckSolution(list, {3, 2, 1, 0});
+    listBase = reverseList(listBase);
+    CheckSolution(listBase, {3, 2, 1, 0});
 
     // Empty
-    list = GenerateList({});
-    CheckSolution(list, {});
+    listEmpty = reverseList(listEmpty);
+    CheckSolution(listEmpty, {});
 
     // Single element
-    list = GenerateList({1});
-    CheckSolution(list, {1});
+    listSingle = reverseList(listSingle);
+    CheckSolution(listSingle, {1});
 }
 
+TEST_F(LCLinkedListTests, MiddleNode) {
+    ListNode *list = GenerateList({1, 2, 3, 4, 5});
+    EXPECT_EQ(middleNode(list)->val, 3);
+}
 
 TEST_F(LCLinkedListTests, MergeTwoLists) {
     ListNode *list1;
@@ -105,13 +108,20 @@ TEST_F(LCLinkedListTests, MergeTwoLists) {
     CheckSolution(result, {2});
 }
 
-TEST_F(LCLinkedListTests, HasCycle) {
-    // TODO
+TEST_F(LCLinkedListTests, SortList) {
+    // Default
+    ListNode *list1 = GenerateList({-1, 5, 3, 4, 0});
+    list1 = sortList(list1);
+    CheckSolution(list1, {-1, 0, 3, 4, 5});
 }
 
-TEST_F(LCLinkedListTests, MiddleNode) {
-    ListNode *list = GenerateList({1, 2, 3, 4, 5});
-    EXPECT_EQ(middleNode(list)->val, 3);
+TEST_F(LCLinkedListTests, HasCycle) {
+    // Default
+    ListNode n1(1);
+    ListNode n3(3,&n1);
+    ListNode n2(2,&n3);
+    n1.next = &n2;
+    EXPECT_TRUE(hasCycle(&n1));
 }
 
 TEST_F(LCLinkedListTests, RemoveLinkedListElements) {
@@ -143,4 +153,13 @@ TEST_F(LCLinkedListTests, RemoveDuplicatesFromSortedList) {
     list = GenerateList({1, 1, 2});
     result = GenerateList({1, 2});
     CheckSolution(result, {1, 2});
+}
+
+TEST_F(LCLinkedListTests, RemoveNthNodeFromEndOfList) {
+    ListNode *list;
+    ListNode *result;
+    // Default
+    list = GenerateList({1, 2, 3, 4, 5});
+    result = removeNthFromEnd(list, 2);
+    CheckSolution(list, {1, 2, 3, 5});
 }

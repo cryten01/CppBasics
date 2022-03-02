@@ -40,6 +40,7 @@ void BinaryXOROperations(int x) {
     BinaryPrint(x);
     BinaryPrint(x - 1);
     BinaryPrint(x ^ x - 1);
+    BinaryPrint(10 ^ 0); // any nr xor with 0 keeps value
 }
 
 void ShowBinaryExamples() {

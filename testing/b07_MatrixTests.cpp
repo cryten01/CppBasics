@@ -13,8 +13,13 @@ TEST(MatrixTests, FloodFill) {
                                     {2, 0, 1}};
 
     image = floodFill(image, 1, 1, 2);
-
     EXPECT_EQ(image, solution);
+
+    // TODO: more testcases
+    // Diagonal
+    // Surrounded
+    // All
+    // Nothing
 }
 
 TEST(MatrixTests, SearchA2DMatrix) {
@@ -62,6 +67,15 @@ TEST(MatrixTests, MaxAreaOfIsland) {
 
 TEST(MatrixTests, M01Matrix) {
     // TODO
+    vector<vector<int>> matrix;
+    vector<vector<int>> solution;
+    matrix = {{0, 0, 0},
+              {0, 1, 0},
+              {1, 1, 1}};
+    solution = {{0, 0, 0},
+                {0, 1, 0},
+                {1, 2, 1}};
+    EXPECT_EQ(updateMatrix(matrix), solution);
 }
 
 TEST(MatrixTests, ReshapeTheMatrix) {
@@ -83,4 +97,12 @@ TEST(MatrixTests, IsValidSudoku) {
                                   {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                                   {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
     EXPECT_TRUE(isValidSudoku(board));
+}
+
+
+TEST(MatrixTests, NumberOfIslands) {
+    std::vector<vector<char>> grid = {{'1', '1', '1', '1', '1', '0', '0', '0', '0'},
+                                      {'0', '0', '1', '1', '1', '0', '0', '0', '0'}};
+    // TODO
+    EXPECT_EQ(numIslands(grid), 1);
 }

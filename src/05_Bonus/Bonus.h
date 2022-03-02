@@ -12,5 +12,6 @@
 #include "Math.h"
 #include "Backtracking.h"
 #include "Binary.h"
+#include "Graph.h"
 
 #endif //CPPBASICS_BONUS_

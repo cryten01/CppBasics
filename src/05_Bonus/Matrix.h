@@ -7,6 +7,7 @@ using namespace std;
 #include <unordered_map>
 #include <algorithm>
 #include <queue>
+#include <stack>
 
 /**
  * 74. Search a 2D Matrix
@@ -86,8 +87,7 @@ void fill(vector<vector<int>> &image, int sr, int sc, int newColor, int origColo
 
 /**
  * 733. Flood Fill
- * Depth First Search
- * Alternative approaches: Iterative via input
+ * Recursive Depth First Search
  * @param image
  * @param sr
  * @param sc
@@ -107,53 +107,96 @@ vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc, int ne
     return image;
 }
 
+/**
+ * Helper method for 733. Flood Fill (iterative version)
+ * @param image
+ * @param coordsStack
+ * @param row
+ * @param col
+ * @param originalColor
+ */
+void populateStack(vector<vector<int>>& image, stack<pair<int,int>>& coordsStack, int row, int col, int originalColor) {
+    // Boundary check
+    if (row < 0 || col < 0 || row >= image.size() || col >= image[0].size()) {return;}
 
-void bfsDistance(vector<vector<int>> &mat, vector<vector<int>> &copy, int sr, int sc) {
-    // Out of bounds check
-    if (sr >= mat.size() || sc >= mat[0].size() || sr < 0 || sc < 0) { return; }
+    // Color check
+    if (image[row][col] != originalColor) {return;}
 
-    // Already marked check
-    if (copy[sr][sc] == -1) { return; }
-
-//    // BFS exit condition
-//    if (mat[sr][sc] == 0) { return; }
-
-
-
-    // Mark as visited
-//    mat[sr][sc] = -1;
-
-    // Recursively progress in all 4 linear directions if 1 (BFS iteration)
-//    if (mat[sr][sc] >= 1) {
-//        bfsDistance(mat, copy, sr - 1, sc, steps + 1);
-//        bfsDistance(mat, copy, sr + 1, sc, steps + 1);
-//        bfsDistance(mat, copy, sr, sc + 1, steps + 1);
-//        bfsDistance(mat, copy, sr, sc - 1, steps + 1);
-//    }
+    // If all checks passed push it
+    coordsStack.push(pair<int,int>{row,col});
 }
 
 /**
+ * 733. Flood Fill
+ * Iterative DFS
+ * @param image
+ * @param sr
+ * @param sc
+ * @param newColor
+ * @return
+ */
+vector<vector<int>> floodFillIterative(vector<vector<int>>& image, int sr, int sc, int newColor) {
+    // 0,1 case
+    if (image.size() < 1 || image[0].size() < 1) { return image; }
+
+    // Get original color first
+    int originalColor = image[sr][sc];
+
+    // Already same color case
+    if (originalColor == newColor) {return image;}
+
+    // Iterative DFS using a stack containing correct target
+    stack<pair<int,int>> coordsStack;
+
+    // Push starting point
+    coordsStack.push(pair<int,int>{sr,sc});
+
+    // Perform actual DFS
+    while (!coordsStack.empty()) {
+        // Pop element
+        pair<int,int> coords = coordsStack.top();
+        coordsStack.pop();
+
+        // Manipulate pixel
+        image[coords.first][coords.second] = newColor;
+
+        // Iteration step for all 4 directions
+        populateStack(image, coordsStack, coords.first + 1, coords.second, originalColor);
+        populateStack(image, coordsStack, coords.first - 1, coords.second, originalColor);
+        populateStack(image, coordsStack, coords.first, coords.second + 1, originalColor);
+        populateStack(image, coordsStack, coords.first, coords.second - 1, originalColor);
+    }
+
+    return image;
+}
+
+
+/**
  * 542. 01 Matrix
+ * Dynamic Programming
  * @param mat
  * @return
  */
 vector<vector<int>> updateMatrix(vector<vector<int>> &mat) {
-    vector<vector<int>> copy = mat;
+    vector<int> DIR = {0, 1, 0, -1, 0};
 
-    int rows = mat.size();
-    int cols = mat[0].size();
+    int m = mat.size(), n = mat[0].size();
+    queue<pair<int, int>> q;
+    for (int r = 0; r < m; ++r)
+        for (int c = 0; c < n; ++c)
+            if (mat[r][c] == 0) q.emplace(r, c);
+            else mat[r][c] = -1; // Marked as not processed yet!
 
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            if (mat[i][j] == 1) {
-                // Run BFS
-//                int mindDist = bfsDistance(mat, i, j);
-//                copy[i][j] = min(mindDist, copy[i][j]);
-            }
+    while (!q.empty()) {
+        auto [r, c] = q.front(); q.pop();
+        for (int i = 0; i < 4; ++i) {
+            int nr = r + DIR[i], nc = c + DIR[i+1];
+            if (nr < 0 || nr == m || nc < 0 || nc == n || mat[nr][nc] != -1) continue;
+            mat[nr][nc] = mat[r][c] + 1;
+            q.emplace(nr, nc);
         }
     }
-
-    return copy;
+    return mat;
 }
 
 /**
@@ -397,5 +440,52 @@ bool isValidSudoku(vector<vector<char>> &board) {
             }
     return 1;
 }
+
+void dfs(vector<vector<char>> &grid, vector<vector<bool>> &visited, int row, int col) {
+    // Base case: out of bounds
+    if (row < 0 || col < 0 || row >= grid.size() || col >= grid[0].size()) { return; }
+
+    // Base case: water or visited
+    if (grid[row][col] == '0' || visited[row][col]) { return; }
+
+    // Mark all connected land as true
+    visited[row][col] = true;
+
+    // Recursive steps
+    dfs(grid, visited, row + 1, col);
+    dfs(grid, visited, row - 1, col);
+    dfs(grid, visited, row, col + 1);
+    dfs(grid, visited, row, col - 1);
+}
+
+/**
+ * 200. Number of Islands (medium)
+ * Recursive DFS
+ * @param grid
+ * @return
+ */
+int numIslands(vector<vector<char>> &grid) {
+    // 0 case
+    if (grid.size() < 1 || grid[0].size() < 1) { return 0; }
+
+    // default values: false
+    vector<vector<bool>> visited(grid.size(), vector<bool>(grid[0].size(), false));
+
+    int nrOfLands = 0;
+    // Go through every cell
+    for (int row = 0; row < grid.size(); row++) {
+        for (int col = 0; col < grid[0].size(); col++) {
+            // Call dfs if not visited and land
+            if (grid[row][col] == '1' && !visited[row][col]) {
+                dfs(grid, visited, row, col);
+                nrOfLands++;
+            }
+        }
+    }
+
+    return nrOfLands;
+}
+
+
 
 #endif //CPPBASICS_MATRIX_H

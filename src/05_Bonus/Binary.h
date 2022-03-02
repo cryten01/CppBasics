@@ -92,7 +92,7 @@ uint32_t reverseBitsAlt(uint32_t n) {
         // Get nth bit
         bool bit = (n >> i) & 1;
         // Put it in the opposite spot
-        result |= (bit << (31 - i));
+        result = result | (bit << (31 - i));
     }
 
     return result;
@@ -103,7 +103,7 @@ uint32_t reverseBitsAlt(uint32_t n) {
  * @param nums
  * @return
  */
-int singleNumber(std::vector<int>& nums) {
+int singleNumber(std::vector<int> &nums) {
     int result = 0;
 
     for (int i = 0; i < nums.size(); i++) {
@@ -112,6 +112,44 @@ int singleNumber(std::vector<int>& nums) {
     }
 
     return result;
+}
+
+/**
+ * 268. Missing Number
+ * @param nums
+ * @return
+ */
+int missingNumber(std::vector<int> &nums) {
+    int result = nums.size();
+    int i = 0;
+
+    // 0 XOR does not matter
+    for (int num: nums) {
+        // 2 XOR eliminates operation
+        result ^= num;
+        result ^= i;
+        i++;
+    }
+
+    return result;
+}
+
+/**
+ * 338. Counting Bits (medium)
+ * @param n
+ * @return
+ */
+std::vector<int> countBits(int n) {
+    std::vector<int> ans(n + 1, 0);
+
+    int offset = 1;
+    for (int i = 1; i <= ans.size(); i++) {
+        if (offset * 2 == i) { offset = i; }
+
+        ans[i] = 1 + ans[i - offset];
+    }
+
+    return ans;
 }
 
 #endif //CPPBASICS_BINARY_H

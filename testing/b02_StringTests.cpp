@@ -1,10 +1,18 @@
 #include <gtest/gtest.h>
 #include "../src/05_Bonus/String.h"
 
+using namespace std;
+
 TEST(StringTests, ReverseString) {
-    std::vector<char> name = {'h', 'e', 'l', 'l', 'o'};
+    vector<char> name;
+    // Default
+    name = {'h', 'e', 'l', 'l', 'o'};
     reverseString(name);
-    EXPECT_EQ(name, (std::vector<char>{'o', 'l', 'l', 'e', 'h'}));
+    EXPECT_EQ(name, (vector<char>{'o', 'l', 'l', 'e', 'h'}));
+    // Invalid swap
+    name = {'g'};
+    reverseString(name);
+    EXPECT_EQ(name, (vector<char>{'g'}));
 }
 
 TEST(StringTests, FindUniqueChar) {
